@@ -20,7 +20,7 @@ WORKDIR /home/app
 
 COPY index.py .
 COPY requirements.txt .
-RUN pip3 install -r requirements.txt
+RUN pip install -r requirements.txt
 COPY mobilenet_v2-b0353104.pth mobilenet_v2-b0353104.pth
 COPY mobilenet.py mobilenet.py
 #COPY classifier.py classifier.py
@@ -48,7 +48,7 @@ WORKDIR /home/app/
 #ENTRYPOINT [ "python3", "-u", "classifier.py" ]
 #USER app
 
-ENV fprocess="python3 index.py"
+ENV fprocess="python index.py"
 
 EXPOSE 8080
 
