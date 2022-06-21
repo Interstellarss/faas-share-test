@@ -1,10 +1,10 @@
 import torch
 
 # Model
-model = torch.hub.load('ultralytics/yolov5', 'yolov5s')  # or yolov5n - yolov5x6, custom
+model = torch.hub.load('ultralytics/yolov5', 'custom', path='yolov5s_test.pt')  # or yolov5n - yolov5x6, custom
 
 # Images
-img = 'https://ultralytics.com/images/zidane.jpg'  # or file, Path, PIL, OpenCV, numpy, list
+img = '/usr/src/data/images/bus.jpg'  # or file, Path, PIL, OpenCV, numpy, list
 
 # Inference
 results = model(img)

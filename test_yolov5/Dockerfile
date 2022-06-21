@@ -21,9 +21,10 @@ RUN apt update && apt install --no-install-recommends -y zip htop screen libgl1-
 COPY requirements.txt .
 RUN python -m pip install --upgrade pip
 RUN pip uninstall -y torch torchvision torchtext Pillow
-RUN pip install --no-cache -r requirements.txt albumentations wandb gsutil notebook Pillow>=9.1.0 \
-    'opencv-python<4.6.0.66' \
-    --extra-index-url https://download.pytorch.org/whl/cu113
+#RUN pip install --no-cache -r requirements.txt albumentations wandb gsutil notebook Pillow>=9.1.0 \
+#    'opencv-python<4.6.0.66' \
+#    --extra-index-url https://download.pytorch.org/whl/cu113
+RUN pip install  --no-cahe  -r requirements.txt
 
 # Create working directory
 RUN mkdir -p /usr/src/app
@@ -35,7 +36,9 @@ RUN git clone https://github.com/ultralytics/yolov5 /usr/src/yolov5
 
 #COPY 
 
-ENV fprocess="python /usr/src/yolov5/detect.py --weights yolov5s.pt --source /usr/src/yolov5/data/images/bus.jpg"
+#ENV fprocess="python /usr/src/yolov5/detect.py --weights yolov5s.pt --source /usr/src/yolov5/data/images/bus.jpg"
+ENV fprocess="python inference.py"
+
 
 EXPOSE 8080
 
