@@ -18,7 +18,7 @@ COPY mobilenet.py mobilenet.py
 COPY classifier.py classifier.py
 
 #ENTRYPOINT [ "python3", "-u", "classifier.py" ]
-USER app
+#USER app
 
 ENV fprocess="python3 classifier.py"
 
