@@ -21,23 +21,24 @@ def fix_transfer_encoding():
     if transfer_encoding == u"chunked":
         request.environ["wsgi.input_terminated"] = True
 
-'''
+
 @app.route("/init", methods=["POST"])
 def init():
     global model
     model = mobilenet_v2(pretrained=True)
     return ('OK', 200)
-'''
 
-@app.route("/", defaults={"path": ""}, methods=["POST", "GET"])
-@app.route("/<path:path>", methods=["POST", "GET"])
-def main_route(path):
-    raw_body = os.getenv("RAW_BODY", "false")
 
-    as_test = True
+#@app.route("/", defaults={"path": ""}, methods=["POST", "GET"])
+#@app.route("/<path:path>", methods=["POST", "GET"])
+@app.route("/run", methods=["POST"])
+def main_route():
+    #raw_body = os.getenv("RAW_BODY", "false")
 
-    if is_true(raw_body):
-        as_text = False
+    #as_test = True
+
+    #if is_true(raw_body):
+    #    as_text = False
 
     model = mobilenet_v2(pretrained=True)
     input_size=(1, 3, 224, 224)
