@@ -32,7 +32,7 @@ def init():
 #@app.route("/", defaults={"path": ""}, methods=["POST", "GET"])
 #@app.route("/<path:path>", methods=["POST", "GET"])
 @app.route("/run", methods=["POST"])
-def main_route():
+def run():
     #raw_body = os.getenv("RAW_BODY", "false")
 
     #as_test = True

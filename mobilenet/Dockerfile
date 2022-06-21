@@ -9,7 +9,7 @@ USER root
 COPY --from=watchdog /fwatchdog /usr/bin/fwatchdog
 RUN chmod +x /usr/bin/fwatchdog
 
-WORKDIR /app
+WORKDIR /home/app
 COPY requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt
 
