@@ -30,14 +30,13 @@ RUN pip3 install -r requirements.txt
 
 RUN mkdir -p function
 RUN touch ./function/__init__.py
+#USER root
 WORKDIR /home/app/function
 #COPY mobilenet_v2-b0353104.pth mobilenet_v2-b0353104.pth
 
-
-
-USER root
-
-COPY function/ .
+COPY function/handler.py   .
+COPY function/mobilenet.py .
+COPY function/mobilenet_v2-b0353104.pth .
 #RUN chown -R app:app ../
 
 #ARG TEST_COMMAND=tox
