@@ -35,9 +35,9 @@ RUN git clone https://github.com/ultralytics/yolov5 /usr/src/yolov5
 
 #COPY 
 
-ENV fprocess="python /usr/src/yolov5/detect.py --source /usr/src/yolov5/data/images/bus.jpg"
-EXPOSE 8080
+ENV fprocess="python /usr/src/yolov5/detect.py --weights yolov5s.pt --source /usr/src/yolov5/data/images/bus.jpg"
 
+EXPOSE 8080
 
 ENV cgi_headers="true"
 ENV mode="http"
