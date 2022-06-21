@@ -2,12 +2,13 @@
 # Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 #from flask import Flask, request
-
+import flask
 from flask import Flask, request
 from function import handler
 from waitress import serve
 import os
 import torch
+
 from mobilenet import mobilenet_v2
 
 app = Flask(__name__)
