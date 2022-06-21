@@ -4,7 +4,7 @@
 from flask import Flask, request
 
 from flask import Flask, request
-from function import handler
+from handler import handler
 from waitress import serve
 import os
 

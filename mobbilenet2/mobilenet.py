@@ -185,3 +185,6 @@ def mobilenet_v2(pretrained=False, progress=True, **kwargs):
         state_dict = torch.load("mobilenet_v2-b0353104.pth", map_location=torch.device("cuda"))
         model.load_state_dict(state_dict)
     return model
+
+def is_available():
+    return torch.cuda.is_available()
