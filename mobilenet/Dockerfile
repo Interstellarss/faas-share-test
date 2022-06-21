@@ -18,6 +18,7 @@ COPY mobilenet.py mobilenet.py
 COPY classifier.py classifier.py
 
 #ENTRYPOINT [ "python3", "-u", "classifier.py" ]
+USER app
 
 ENV fprocess="python3 classifier.py"
 
@@ -27,7 +28,7 @@ ENV cgi_headers="true"
 ENV mode="http"
 ENV upstream_url="http://127.0.0.1:5000"
 # Set environment variables
-ENV OMP_NUM_THREADS=8
+#ENV OMP_NUM_THREADS=8
 
 HEALTHCHECK --interval=5s CMD [ -e /tmp/.lock ] || exit 1
 CMD ["fwatchdog"]
