@@ -1,7 +1,8 @@
 
 FROM --platform=${TARGETPLATFORM:-linux/amd64}  ghcr.io/openfaas/of-watchdog:0.9.6 as watchdog
 #need to modify to nvidia pytorch
-FROM nvcr.io/nvidia/pytorch:22.04-py3
+#FROM nvcr.io/nvidia/pytorch:22.04-py3
+FROM bitnami/pytorch:1.5.1
 
 #copy fwatchdog
 COPY --from=watchdog /fwatchdog /usr/bin/fwatchdog
