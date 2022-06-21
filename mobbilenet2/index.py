@@ -1,10 +1,10 @@
 # Copyright (c) Alex Ellis 2017. All rights reserved.
 # Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-from flask import Flask, request
+#from flask import Flask, request
 
 from flask import Flask, request
-from handler import handler
+from function import handler
 from waitress import serve
 import os
 
