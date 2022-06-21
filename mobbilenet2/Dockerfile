@@ -31,7 +31,7 @@ RUN pip3 install -r requirements.txt
 RUN mkdir -p function
 RUN touch ./function/__init__.py
 WORKDIR /home/app/function
-COPY mobilenet_v2-b0353104.pth mobilenet_v2-b0353104.pth
+#COPY mobilenet_v2-b0353104.pth mobilenet_v2-b0353104.pth
 
 
 
