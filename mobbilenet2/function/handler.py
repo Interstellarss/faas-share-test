@@ -22,9 +22,9 @@ def handle(req):
     if is_available():
         #response = flask.jsonify({"message": "success"})
         #response.status_code = 200
-        return True
+        return "true"
     else:
-        return False
+        return "false"
     
     #return response
 
