@@ -6,7 +6,7 @@ from waitress import serve
 import os
 
 app = Flask(__name__)
-app.debug = False
+app.debug = True
 model = None
 
 @app.before_request
@@ -31,7 +31,14 @@ def init():
 
 @app.route("/", defaults={"path": ""}, methods=["POST", "GET"])
 @app.route("/<path:path>", methods=["POST", "GET"])
-def run():
+def main_route(path):
+    raw_body = os.getenv("RAW_BODY", "false")
+
+    as_test = True
+
+    if is_true(raw_body):
+        as_text = False
+
     model = mobilenet_v2(pretrained=True)
     input_size=(1, 3, 224, 224)
     x = torch.randn(input_size)
