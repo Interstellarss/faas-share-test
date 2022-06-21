@@ -20,8 +20,8 @@ WORKDIR /home/app
 COPY index.py .
 COPY requirements.txt .
 RUN pip3 install -r requirements.txt
-#COPY mobilenet_v2-b0353104.pth mobilenet_v2-b0353104.pth
-#COPY mobilenet.py mobilenet.py
+COPY mobilenet_v2-b0353104.pth mobilenet_v2-b0353104.pth
+COPY mobilenet.py mobilenet.py
 #COPY classifier.py classifier.py
 
 
@@ -35,8 +35,8 @@ WORKDIR /home/app/function
 #COPY mobilenet_v2-b0353104.pth mobilenet_v2-b0353104.pth
 
 COPY function/handler.py   .
-COPY function/mobilenet.py .
-COPY function/mobilenet_v2-b0353104.pth .
+#COPY function/mobilenet.py .
+#COPY function/mobilenet_v2-b0353104.pth .
 #RUN chown -R app:app ../
 
 #ARG TEST_COMMAND=tox
