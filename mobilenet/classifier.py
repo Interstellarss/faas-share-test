@@ -21,15 +21,18 @@ def fix_transfer_encoding():
     if transfer_encoding == u"chunked":
         request.environ["wsgi.input_terminated"] = True
 
+'''
 @app.route("/init", methods=["POST"])
 def init():
     global model
     model = mobilenet_v2(pretrained=True)
     return ('OK', 200)
+'''
 
 @app.route("/", defaults={"path": ""}, methods=["POST", "GET"])
 @app.route("/<path:path>", methods=["POST", "GET"])
 def run():
+    model = mobilenet_v2(pretrained=True)
     input_size=(1, 3, 224, 224)
     x = torch.randn(input_size)
     out = model(x)
