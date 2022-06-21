@@ -38,7 +38,12 @@ RUN git clone https://github.com/ultralytics/yolov5 /usr/src/yolov5
 ENV fprocess="python /usr/src/yolov5/detect.py --source /usr/src/yolov5/data/images/bus.jpg"
 EXPOSE 8080
 
+
+ENV cgi_headers="true"
+ENV mode="http"
+ENV upstream_url="http://127.0.0.1:5000"
 # Set environment variables
 ENV OMP_NUM_THREADS=8
 
+HEALTHCHECK --interval=5s CMD [ -e /tmp/.lock ] || exit 1
 CMD ["fwatchdog"]
