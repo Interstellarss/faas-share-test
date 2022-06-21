@@ -4,6 +4,7 @@ FROM --platform=${TARGETPLATFORM:-linux/amd64}  ghcr.io/openfaas/of-watchdog:0.9
 #FROM nvcr.io/nvidia/pytorch:22.04-py3
 FROM bitnami/pytorch:1.5.1
 
+USER root
 #copy fwatchdog
 COPY --from=watchdog /fwatchdog /usr/bin/fwatchdog
 RUN chmod +x /usr/bin/fwatchdog
