@@ -8,6 +8,8 @@ from function import handler
 from waitress import serve
 import os
 
+from mobilenet import mobilenet_v2
+
 app = Flask(__name__)
 
 # distutils.util.strtobool() can throw an exception
@@ -36,8 +38,15 @@ def main_route(path):
     if is_true(raw_body):
         as_text = False
     
-    ret = handler.handle(request.get_data(as_text=as_text))
-    return ret
+    model = mobilenet_v2(pretrained=True)
+    input_size=(1, 3, 224, 224)
+    x = torch.randn(input_size)
+    out = model(x)
+    response = flask.jsonify({"message": "success"})
+    response.status_code = 200
+
+    #ret = handler.handle(request.get_data(as_text=as_text))
+    return response
 
 if __name__ == '__main__':
     serve(app, host='0.0.0.0', port=5000)
