@@ -3,6 +3,6 @@
 #jinja2<3.1.0
 #itsdangerous==2.0.1
 #werkzeug==2.0.3
-waitress
+#waitress
 flask
 waitress
