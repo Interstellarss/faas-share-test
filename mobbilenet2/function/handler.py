@@ -1,7 +1,7 @@
 #from mobilenet import mobilenet_v2
 
-from pickle import TRUE
-from mobbilenet2.mobilenet import is_available
+#from pickle import TRUE
+#from mobbilenet2.mobilenet import is_available
 from mobilenet import mobilenet_v2
 
 from mobilenet import is_available
