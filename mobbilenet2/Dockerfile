@@ -8,10 +8,10 @@ USER root
 COPY --from=watchdog /fwatchdog /usr/bin/fwatchdog
 RUN chmod +x /usr/bin/fwatchdog
 
-RUN addgroup -S app && adduser app -S -G app
-RUN chown app /home/app
+#RUN addgroup -S app && adduser app -S -G app
+#RUN chown app /home/app
 
-USER app
+#USER app
 
 ENV PATH=$PATH:/home/app/.local/bin
 
@@ -26,7 +26,7 @@ RUN pip3 install -r requirements.txt
 
 
 
-USER app
+#USER app
 
 RUN mkdir -p function
 RUN touch ./function/__init__.py
@@ -46,7 +46,7 @@ COPY function/ .
 
 WORKDIR /home/app/
 #ENTRYPOINT [ "python3", "-u", "classifier.py" ]
-USER app
+#USER app
 
 ENV fprocess="python3 index.py"
 
