@@ -1,4 +1,4 @@
-from MobileNetV2 import mobilenet_v2
+from mobilenet import mobilenet_v2
 
 global model
 
