@@ -24,7 +24,7 @@ RUN pip uninstall -y torch torchvision torchtext Pillow
 #RUN pip install --no-cache -r requirements.txt albumentations wandb gsutil notebook Pillow>=9.1.0 \
 #    'opencv-python<4.6.0.66' \
 #    --extra-index-url https://download.pytorch.org/whl/cu113
-RUN pip install  --no-cahe  -r requirements.txt
+RUN pip install  -r requirements.txt
 
 # Create working directory
 RUN mkdir -p /usr/src/app
