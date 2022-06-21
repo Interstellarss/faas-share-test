@@ -31,7 +31,7 @@ RUN git clone https://github.com/ultralytics/yolov5 /usr/src/yolov5
 
 #COPY 
 
-ENV fprocess="python detect.py --source /usr/src/yolov5/data/images/bus.jpg"
+ENV fprocess="python /usr/src/yolov5/detect.py --source /usr/src/yolov5/data/images/bus.jpg"
 EXPOSE 8080
 
 # Set environment variables
