@@ -9,7 +9,7 @@ RUN chmod +x /usr/bin/fwatchdog
 ENV PATH=$PATH:/home/app/.local/bin
 
 WORKDIR /home/app
-COPY index.py .
+COPY index.py index.py
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 
