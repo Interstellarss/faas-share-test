@@ -45,7 +45,7 @@ def main_route(path):
     out = model(x)
 
     #ret = handler.handle(request.get_data(as_text=as_text))
-    return out
+    return str(out)
 
 if __name__ == '__main__':
     serve(app, host='0.0.0.0', port=5000)
