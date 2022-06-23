@@ -24,7 +24,7 @@ RUN touch ./function/__init__.py
 WORKDIR /home/app/function
 #COPY mobilenet_v2-b0353104.pth mobilenet_v2-b0353104.pth
 
-COPY function/handler.py   .
+#COPY function/handler.py   .
 
 WORKDIR /home/app/
 
