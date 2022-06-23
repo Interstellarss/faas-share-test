@@ -4,7 +4,7 @@
 #from flask import Flask, request
 import flask
 from flask import Flask, request
-from function import handler
+#from function import handler
 from waitress import serve
 import os
 import torch
