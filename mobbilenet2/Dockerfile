@@ -21,9 +21,9 @@ WORKDIR /home/app
 COPY index.py .
 COPY requirements.txt .
 RUN pip install -r requirements.txt
-COPY mobilenet_v2-b0353104.pth mobilenet_v2-b0353104.pth
+#COPY mobilenet_v2-b0353104.pth mobilenet_v2-b0353104.pth
 COPY mobilenet.py mobilenet.py
-#COPY classifier.py classifier.py
+COPY index.py index.py
 
 
 
