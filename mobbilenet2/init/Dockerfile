@@ -1,4 +1,4 @@
-FROM --platform=${TARGETPLATFORM:-linux/amd64} alphine
+FROM --platform=${TARGETPLATFORM:-linux/amd64} alphine:latest
 
 WORKDIR /tmp/mobilene
 
