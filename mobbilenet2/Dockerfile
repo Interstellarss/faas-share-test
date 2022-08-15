@@ -4,6 +4,10 @@ FROM --platform=${TARGETPLATFORM:-linux/amd64}  ghcr.io/openfaas/of-watchdog:0.9
 #FROM bitnami/pytorch:1.5.1
 FROM pytorch/pytorch:1.5.1-cuda10.1-cudnn7-runtime
 
+
+
+
+
 USER root
 #copy fwatchdog
 COPY --from=watchdog /fwatchdog /usr/bin/fwatchdog
