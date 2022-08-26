@@ -181,10 +181,13 @@ def mobilenet_v2(pretrained=False, progress=True, **kwargs):
         progress (bool): If True, displays a progress bar of the download to stderr
     """
     model = MobileNetV2(**kwargs)
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     if pretrained:
         state_dict = torch.load("/model/mobilenet/mobilenet_v2-b0353104.pth", map_location=torch.device("cuda"))
         model.load_state_dict(state_dict)
-    return model
+        model.to(device)
+
+    return (model, device)
 
 def is_available():
     return torch.cuda.is_available()

@@ -39,9 +39,9 @@ def main_route(path):
     if is_true(raw_body):
         as_text = False
     
-    model = mobilenet_v2(pretrained=True)
+    model, device = mobilenet_v2(pretrained=True)
     input_size=(1, 3, 224, 224)
-    x = torch.randn(input_size)
+    x = torch.randn(input_size, device=device)
     out = model(x)
     response = flask.jsonify({"message": "success"})
     response.status_code = 200

@@ -105,9 +105,11 @@ def _squeezenet(version, pretrained, progress, **kwargs):
     model = SqueezeNet(version, **kwargs)
     if pretrained:
         arch = 'squeezenet' + version
-        state_dict = torch.load(model_urls[arch], map_location=torch.device("cuda"))
+        state_dict = torch.load(model_urls[arch])
         model.load_state_dict(state_dict)
-    return model
+        device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        model.to(device)
+    return (model, device)
 
 
 def squeezenet1_0(pretrained=False, progress=True, **kwargs):
