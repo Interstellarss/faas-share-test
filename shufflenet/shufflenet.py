@@ -147,8 +147,9 @@ def _shufflenetv2(arch, pretrained, progress, *args, **kwargs):
         else:
             state_dict = torch.load(model_url, map_location=torch.device("cuda"))
             model.load_state_dict(state_dict)
-
-    return model
+            device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+            model.to(device)
+    return (model, device)
 
 
 def shufflenet_v2_x0_5(pretrained=False, progress=True, **kwargs):
