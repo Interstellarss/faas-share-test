@@ -5,8 +5,8 @@ import torch.nn.init as init
 __all__ = ['SqueezeNet', 'squeezenet1_0', 'squeezenet1_1']
 
 model_urls = {
-    'squeezenet1_0': 'squeezenet1_0-a815701f.pth',
-    'squeezenet1_1': 'squeezenet1_1-f364aa15.pth',
+    'squeezenet1_0': '/model/squeezenet/squeezenet1_0-a815701f.pth',
+    'squeezenet1_1': '/model/squeezenet/squeezenet1_1-f364aa15.pth',
 }
 
 

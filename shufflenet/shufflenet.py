@@ -8,8 +8,8 @@ __all__ = [
 ]
 
 model_urls = {
-    'shufflenetv2_x0.5': 'shufflenetv2_x0.5-f707e7126e.pth',
-    'shufflenetv2_x1.0': 'shufflenetv2_x1-5666bf0f80.pth',
+    'shufflenetv2_x0.5': '/model/shufflenet/shufflenetv2_x0.5-f707e7126e.pth',
+    'shufflenetv2_x1.0': '/model/shufflenet/shufflenetv2_x1-5666bf0f80.pth',
     'shufflenetv2_x1.5': None,
     'shufflenetv2_x2.0': None,
 }

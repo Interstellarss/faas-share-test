@@ -6,7 +6,8 @@ __all__ = ['MobileNetV2', 'mobilenet_v2']
 
 
 model_urls = {
-    'mobilenet_v2': 'https://download.pytorch.org/models/mobilenet_v2-b0353104.pth',
+    # 'mobilenet_v2': 'https://download.pytorch.org/models/mobilenet_v2-b0353104.pth',
+    'mobilenet_v2': '/model/mobilenet/mobilenet_v2-b0353104.pth',
 }
 
 
@@ -181,7 +182,13 @@ def mobilenet_v2(pretrained=False, progress=True, **kwargs):
         progress (bool): If True, displays a progress bar of the download to stderr
     """
     model = MobileNetV2(**kwargs)
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     if pretrained:
-        state_dict = torch.load("mobilenet_v2-b0353104.pth", map_location=torch.device("gpu"))
+        state_dict = torch.load("/model/mobilenet/mobilenet_v2-b0353104.pth", map_location=torch.device("cuda"))
         model.load_state_dict(state_dict)
-    return model
+        model.to(device)
+
+    return (model, device)
+
+def is_available():
+    return torch.cuda.is_available()
