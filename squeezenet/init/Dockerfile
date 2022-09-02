@@ -6,4 +6,4 @@ COPY squeezenet1_0-a815701f.pth .
 
 COPY squeezenet1_1-f364aa15.pth .
 
-CMD ["cp", "/tmp/squeezenet/", "/model/squeezenet/"]
+CMD ["cp", "-r", "/tmp/squeezenet/", "/model/squeezenet/"]
