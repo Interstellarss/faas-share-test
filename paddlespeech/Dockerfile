@@ -24,6 +24,7 @@ RUN chmod +x /usr/bin/fwatchdog
 # Env Setup
 WORKDIR /home/app
 COPY application.yaml application.yaml
+ADD probe probe
 EXPOSE 8080
 
 ENV cgi_headers="true"
