@@ -6,6 +6,7 @@ USER root
 COPY --from=watchdog /fwatchdog /usr/bin/fwatchdog
 RUN chmod +x /usr/bin/fwatchdog
 
+
 ENV PATH=$PATH:/home/app/.local/bin
 
 WORKDIR /home/app
@@ -26,8 +27,16 @@ WORKDIR /home/app/function
 
 #COPY function/handler.py   .
 
+
+
+
 WORKDIR /home/app/
 
+
+RUN apt-get update && \ 
+    apt-get install -y wget curl -y
+
+COPY probe.sh probe.sh
 
 ENV fprocess="python index.py"
 

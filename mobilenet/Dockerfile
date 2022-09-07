@@ -5,6 +5,8 @@ FROM --platform=${TARGETPLATFORM:-linux/amd64}  ghcr.io/openfaas/of-watchdog:0.9
 FROM pytorch/pytorch:1.5.1-cuda10.1-cudnn7-runtime
 
 
+RUN apt-get update && \ 
+    apt-get install -y wget curl -y
 
 
 
@@ -17,6 +19,8 @@ RUN chmod +x /usr/bin/fwatchdog
 #RUN chown app /home/app
 
 #USER app
+
+
 
 ENV PATH=$PATH:/home/app/.local/bin
 
@@ -48,9 +52,16 @@ COPY function/handler.py   .
 #ARG TEST_ENABLED=true
 #RUN [ "$TEST_ENABLED" = "false" ] && echo "skipping tests" || eval "$TEST_COMMAND"
 
+
+
 WORKDIR /home/app/
 #ENTRYPOINT [ "python3", "-u", "classifier.py" ]
 #USER app
+
+RUN apt-get update && \ 
+    apt-get install -y wget curl -y
+
+COPY probe.sh probe.sh
 
 ENV fprocess="python index.py"
 
