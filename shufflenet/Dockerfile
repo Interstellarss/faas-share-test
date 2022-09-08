@@ -35,7 +35,7 @@ WORKDIR /home/app/
 RUN apt-get update && \ 
     apt-get install -y wget curl -y
 
-ADD porbe probe
+ADD probe probe
 
 ENV fprocess="python index.py"
 
