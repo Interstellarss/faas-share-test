@@ -6,7 +6,7 @@ __all__ = ['SqueezeNet', 'squeezenet1_0', 'squeezenet1_1']
 
 model_urls = {
     'squeezenet1_0': '/home/app/squeezenet1_0-a815701f.pth',
-    'squeezenet1_1': '/home/app/squeezenet/squeezenet1_1-f364aa15.pth',
+    'squeezenet1_1': '/home/app//squeezenet1_1-f364aa15.pth',
 }
 
 
