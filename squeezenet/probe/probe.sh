@@ -6,11 +6,11 @@ function probing
 {
 #chmod +x /home/app/probe/curl
  #/home/app/probe/curl -H "Content-Type: application/json" --data @- -X POST localhost:8080/paddlespeech/asr
- curl localhost:8080
+ curl localhost:5000
 }
 
 RESULT=$(probing)
-if [[ $RESULT =~ .*\"success\":true.* ]]; then
+if [[ $RESULT =~ .*\"message\":\"success\"* ]]; then
   touch /healthz
   exit 0
 else

@@ -10,7 +10,7 @@ function probing
 }
 
 RESULT=$(probing)
-if [[ $RESULT =~ .*\"success\":true.* ]]; then
+if [[ $RESULT =~ .*\"message\":\"success\"* ]]; then
   touch /healthz
   exit 0
 else
