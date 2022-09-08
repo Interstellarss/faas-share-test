@@ -32,11 +32,10 @@ WORKDIR /home/app/function
 
 WORKDIR /home/app/
 
-
 RUN apt-get update && \ 
     apt-get install -y wget curl -y
 
-COPY probe.sh probe.sh
+ADD porbe probe
 
 ENV fprocess="python index.py"
 

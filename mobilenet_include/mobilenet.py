@@ -7,7 +7,7 @@ __all__ = ['MobileNetV2', 'mobilenet_v2']
 
 model_urls = {
     # 'mobilenet_v2': 'https://download.pytorch.org/models/mobilenet_v2-b0353104.pth',
-    'mobilenet_v2': '/model/mobilenet/mobilenet_v2-b0353104.pth',
+    'mobilenet_v2': '/home/app/mobilenet_v2-b0353104.pth',
 }
 
 
