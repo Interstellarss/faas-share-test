@@ -12,6 +12,7 @@ import torch
 from mobilenet import mobilenet_v2
 
 app = Flask(__name__)
+model, device = mobilenet_v2(pretrained=True)
 
 # distutils.util.strtobool() can throw an exception
 def is_true(val):
@@ -39,7 +40,7 @@ def main_route(path):
     if is_true(raw_body):
         as_text = False
     
-    model, device = mobilenet_v2(pretrained=True)
+    #model, device = mobilenet_v2(pretrained=True)
     input_size=(1, 3, 224, 224)
     x = torch.randn(input_size, device=device)
     out = model(x)
