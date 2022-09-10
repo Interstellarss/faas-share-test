@@ -12,7 +12,7 @@ import torch
 from squeezenet import squeezenet1_1
 
 app = Flask(__name__)
-
+model, device = squeezenet1_1(pretrained=True)
 # distutils.util.strtobool() can throw an exception
 def is_true(val):
     return len(val) > 0 and val.lower() == "true" or val == "1"
@@ -39,7 +39,7 @@ def main_route(path):
     if is_true(raw_body):
         as_text = False
     
-    model, device = squeezenet1_1(pretrained=True)
+    #model, device = squeezenet1_1(pretrained=True)
 
     input_size=(1, 3, 224, 224)
     x = torch.randn(input_size, device=device)
