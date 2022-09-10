@@ -12,7 +12,7 @@ import torch
 from shufflenet import shufflenet_v2_x0_5
 
 app = Flask(__name__)
-
+model, device = shufflenet_v2_x0_5(pretrained=True)
 # distutils.util.strtobool() can throw an exception
 def is_true(val):
     return len(val) > 0 and val.lower() == "true" or val == "1"
