@@ -5,7 +5,7 @@
 import flask
 from flask import Flask, request
 #from function import handler
-#from waitress import serve
+from waitress import serve
 import os
 import torch
 
@@ -51,5 +51,5 @@ def main_route(path):
     return response
 
 if __name__ == '__main__':
-    #serve(app, host='0.0.0.0', port=5000)
-    app.run(host='0.0.0.0', port=5000)
+    serve(app, host='0.0.0.0', port=5000, backlog=10)
+    #app.run(host='0.0.0.0', port=5000)
