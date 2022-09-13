@@ -41,6 +41,7 @@ EXPOSE 8080
 ENV cgi_headers="true"
 ENV mode="http"
 ENV upstream_url="http://127.0.0.1:5000"
+ENV exec_timeout=1s
 # Set environment variables
 #ENV OMP_NUM_THREADS=8
 
