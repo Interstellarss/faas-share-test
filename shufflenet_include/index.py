@@ -59,7 +59,7 @@ def main_route(path):
     if is_true(raw_body):
         as_text = False
     
-    model, device = shufflenet_v2_x0_5(pretrained=True)
+    #model, device = shufflenet_v2_x0_5(pretrained=True)
     input_size=(1, 3, 224, 224)
     x = torch.randn(input_size, device=device)
     out = model(x)
