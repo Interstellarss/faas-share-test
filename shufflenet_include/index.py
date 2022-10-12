@@ -5,15 +5,33 @@
 import flask
 from flask import Flask, request
 #from function import handler
-from waitress import serve
+#from waitress import serve
+from celery import Celery
 import os
 import torch
 
 from shufflenet import shufflenet_v2_x0_5
 
-app = Flask(__name__)
+
+#app = Flask(__name__)
+app = Celery(
+    'shufflenet',
+    broker='redis://',
+    backend='redis://',
+)
+
+
+app.conf.update(
+    CELERY_TASK_SERIALIZER='json',
+    CELERY_ACCEPT_CONTENT=['json'],  # Ignore other content
+    CELERY_RESULT_SERIALIZER='json',
+    CELERY_ENABLE_UTC=True,
+    CELERY_TASK_PROTOCOL=1,
+)
 
 model, device = shufflenet_v2_x0_5(pretrained=True)
+
+
 # distutils.util.strtobool() can throw an exception
 def is_true(val):
     return len(val) > 0 and val.lower() == "true" or val == "1"
@@ -30,8 +48,9 @@ def fix_transfer_encoding():
     if transfer_encoding == u"chunked":
         request.environ["wsgi.input_terminated"] = True
 
-@app.route("/", defaults={"path": ""}, methods=["POST", "GET"])
-@app.route("/<path:path>", methods=["POST", "GET"])
+#@app.route("/", defaults={"path": ""}, methods=["POST", "GET"])
+#@app.route("/<path:path>", methods=["POST", "GET"])
+@app.task
 def main_route(path):
     raw_body = os.getenv("RAW_BODY", "false")
 
@@ -50,6 +69,6 @@ def main_route(path):
     #return str(out)
     return response
 
-if __name__ == '__main__':
-    serve(app, host='0.0.0.0', port=5000, backlog=10)
+#if __name__ == '__main__':
+    #serve(app, host='0.0.0.0', port=5000, backlog=10)
     #app.run(host='0.0.0.0', port=5000)

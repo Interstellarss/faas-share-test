@@ -152,5 +152,5 @@ def main_route(path):
     return response
 
 if __name__ == '__main__':
-    serve(app, host='0.0.0.0', port=5000, backlog=10)
+    serve(app, host='0.0.0.0', port=5000, backlog=10, connection_limit=10)
 
