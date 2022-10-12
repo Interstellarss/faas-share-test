@@ -36,7 +36,7 @@ model, device = shufflenet_v2_x0_5(pretrained=True)
 def is_true(val):
     return len(val) > 0 and val.lower() == "true" or val == "1"
 
-@app.before_request
+#@app.before_request
 def fix_transfer_encoding():
     """
     Sets the "wsgi.input_terminated" environment flag, thus enabling
