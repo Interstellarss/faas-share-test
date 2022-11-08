@@ -15,9 +15,10 @@ from shufflenet import shufflenet_v2_x0_5
 
 #app = Flask(__name__)
 app = Celery(
-    'shufflenet',
-    broker='redis://',
-    backend='redis://',
+    'index',
+    broker='redis://10.100.81.107:6379',
+    backend='redis://10.100.81.107:6379',
+    #include=['app.index']
 )
 
 
@@ -30,7 +31,7 @@ app.conf.update(
 )
 
 model, device = shufflenet_v2_x0_5(pretrained=True)
-
+podname = os.getenv("POD_NAME")
 
 # distutils.util.strtobool() can throw an exception
 def is_true(val):
@@ -51,24 +52,28 @@ def fix_transfer_encoding():
 #@app.route("/", defaults={"path": ""}, methods=["POST", "GET"])
 #@app.route("/<path:path>", methods=["POST", "GET"])
 @app.task
-def main_route(path):
-    raw_body = os.getenv("RAW_BODY", "false")
+def shufflenet(path):
+    #raw_body = os.getenv("RAW_BODY", "false")
 
-    as_text = True
+    #as_text = True
 
-    if is_true(raw_body):
-        as_text = False
+    #if is_true(raw_body):
+    #    as_text = False
     
     #model, device = shufflenet_v2_x0_5(pretrained=True)
     input_size=(1, 3, 224, 224)
     x = torch.randn(input_size, device=device)
     out = model(x)
-    response = flask.jsonify({"message": "success"})
-    response.status_code = 200
+    #response = flask.jsonify({"message": "success"})
+    #response.status_code = 200
     #ret = handler.handle(request.get_data(as_text=as_text))
     #return str(out)
-    return response
+    tmp = str(out)
+    return str(podname)
 
-#if __name__ == '__main__':
+if __name__ == '__main__':
     #serve(app, host='0.0.0.0', port=5000, backlog=10)
     #app.run(host='0.0.0.0', port=5000)
+    app.start()
+    #app.app_context().push()
+

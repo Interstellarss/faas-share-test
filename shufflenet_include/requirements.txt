@@ -1,3 +1,5 @@
 Flask
 #waitress
+importlib-metadata == 4.13.0
+Redis
 celery

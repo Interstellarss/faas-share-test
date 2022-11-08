@@ -1,6 +1,7 @@
 import torch
 import torch.nn as nn
 import torch.nn.init as init
+import datetime
 
 __all__ = ['SqueezeNet', 'squeezenet1_0', 'squeezenet1_1']
 
@@ -102,11 +103,15 @@ class SqueezeNet(nn.Module):
 
 
 def _squeezenet(version, pretrained, progress, **kwargs):
+    print("initial models @", datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f'), flush=True)
     model = SqueezeNet(version, **kwargs)
     if pretrained:
         arch = 'squeezenet' + version
-        state_dict = torch.load(model_urls[arch])
+        #state_dict = torch.load(model_urls[arch])
+        print("loading params to cudas @", datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f'), flush=True)
+        state_dict = torch.load(model_urls[arch], map_location="cuda:0")
         model.load_state_dict(state_dict)
+        print("loaded to cuda @", datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f'), flush=True)
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         model.to(device)
     return (model, device)

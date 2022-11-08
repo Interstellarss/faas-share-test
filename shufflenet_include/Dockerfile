@@ -33,11 +33,12 @@ WORKDIR /home/app/function
 WORKDIR /home/app/
 
 RUN apt-get update && \ 
-    apt-get install -y wget curl -y
+    apt-get install -y wget curl
 
 ADD probe probe
 
-ENV fprocess="python index.py"
+#ENV fprocess="python index.py"
+ENV fprocess="celery -A index worker --loglevel=debug"
 
 EXPOSE 8080
 
@@ -47,6 +48,7 @@ ENV upstream_url="http://127.0.0.1:5000"
 # Set environment variables
 #ENV OMP_NUM_THREADS=8
 
-HEALTHCHECK --interval=5s CMD [ -e /tmp/.lock ] || exit 1
-CMD ["fwatchdog"]
+#HEALTHCHECK --interval=5s CMD [ -e /tmp/.lock ] || exit 1
+#CMD ["fwatchdog"]
+CMD ["celery", "-A", "index", "worker", "--loglevel=debug", "--pool=solo", "--without-heartbeat", "--without-mingle"]
 #ENTRYPOINT [ "python3", "-u", "classifier.py" ]

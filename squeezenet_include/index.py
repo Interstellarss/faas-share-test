@@ -8,11 +8,14 @@ from flask import Flask, request
 from waitress import serve
 import os
 import torch
+import datetime
 
 from squeezenet import squeezenet1_1
 
 app = Flask(__name__)
+print("loading params to gpus @", datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f'), flush=True)
 model, device = squeezenet1_1(pretrained=True)
+print("loaded @", datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f'), flush=True)
 # distutils.util.strtobool() can throw an exception
 def is_true(val):
     return len(val) > 0 and val.lower() == "true" or val == "1"

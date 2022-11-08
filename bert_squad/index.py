@@ -68,9 +68,15 @@ config = BertConfig.from_json_file(args.config_file)
 if config.vocab_size % 8 != 0:
     config.vocab_size += 8 - (config.vocab_size % 8)
     # initialize model
+
+import time
+print("initing model @", time.time(), flush=True)
 model = BertForQuestionAnswering(config)
+print("loading params to gpu @", time.time(), flush=True)
 model.load_state_dict(torch.load(args.init_checkpoint, map_location='cuda:0')["model"])
+print("convert the model's parameter tensors to CUDA tensors @", time.time(), flush=True)
 model.to(device)
+print("converted @", time.time(), flush=True)
 if args.fp16:
     model.half()
 model.eval()
