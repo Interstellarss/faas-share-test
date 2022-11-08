@@ -1,0 +1,857 @@
+/usr/bin/nvidia-smi
+[launcher] scheduler started on 0.0.0.0:49901
+2022-10-18 21:44:58.703735 INFO:scheduler.cpp:203 There are 0 clients in the system...
+2022-10-18 21:44:58.704146 INFO:scheduler.cpp:220 Monitor thread created.
+2022-10-18 21:44:58.704280 INFO:scheduler.cpp:665 Waiting for incoming connection
+2022-10-18 21:44:58.704306 INFO:scheduler.cpp:233 Watching '/kubeshare/scheduler/config'.
+2022-10-18 21:44:58.704458 DEBU:scheduler.cpp:524 no candidates
+2022-10-18 21:46:56.226380 INFO:scheduler.cpp:248 File GPU-5dc0320f-f8ef-0fb7-7d48-98682d6d4837 modified with watch descriptor 1.
+2022-10-18 21:46:56.226434 INFO:scheduler.cpp:251 Update containers' settings...
+2022-10-18 21:46:56.226585 INFO:scheduler.cpp:203 There are 1 clients in the system...
+2022-10-18 21:46:56.226872 INFO:scheduler.cpp:213 faas-share-fn/shufflenet-d1hrv request: 0.10, limit: 0.20, memory limit: 7480000000 bytes
+[launcher] pod manager id 'faas-share-fn/shufflenet-d1hrv 50051' port '50051' start running
+2022-10-18 21:46:56.532060 INFO:pod-manager.cpp:181 Pod server port = 50051.
+2022-10-18 21:46:56.532289 INFO:pod-manager.cpp:192 scheduler 127.0.0.1:49901
+2022-10-18 21:46:56.532813 INFO:scheduler.cpp:669 Received an incoming connection.
+2022-10-18 21:46:56.533249 DEBU:scheduler.cpp:539 pod_client_func recv -> handle message
+2022-10-18 21:46:56.533502 DEBU:scheduler.cpp:438 faas-share-fn/shufflenet-d1hrv handle_message: REQ_MEM_LIMIT 0 
+2022-10-18 21:46:56.533548 INFO:pod-manager.cpp:153 GPU memory limit: 7480000000 bytes.
+2022-10-18 21:46:56.533947 DEBU:pod-manager.cpp:554 scheduler_thread_send_func
+2022-10-18 21:46:56.534072 DEBU:pod-manager.cpp:585 scheduler_thread_recv_func
+2022-10-18 21:47:02.731612 DEBU:pod-manager.cpp:477 hook thread started.
+2022-10-18 21:47:02.731674 INFO:pod-manager.cpp:478 hook thread started.
+2022-10-18 21:47:02.731714 DEBU:pod-manager.cpp:319 faas-share-fn/shufflenet-d1hrv kernel launch, # 1
+2022-10-18 21:47:02.731738 DEBU:pod-manager.cpp:374 faas-share-fn/shufflenet-d1hrv hook_kernel_launch: quota_state = 1, req_id -2140484600
+2022-10-18 21:47:02.731776 DEBU:pod-manager.cpp:390 faas-share-fn/shufflenet-d1hrv send signal & req_queue_cond 0, req_id 1
+2022-10-18 21:47:02.731792 DEBU:pod-manager.cpp:393 faas-share-fn/shufflenet-d1hrv unlock req_queue_mutex 0, req_id 1
+2022-10-18 21:47:02.731807 DEBU:pod-manager.cpp:399 faas-share-fn/shufflenet-d1hrv check completed status 0, req_id 1
+2022-10-18 21:47:02.731821 DEBU:pod-manager.cpp:404 faas-share-fn/shufflenet-d1hrv scheduler_recv_sync 1, req_id 1
+2022-10-18 21:47:02.731963 DEBU:pod-manager.cpp:570 scheduler_thread_send_func recv > 0, 80
+2022-10-18 21:47:02.732010 DEBU:pod-manager.cpp:571 send a kernel launch request, req_id: 1
+2022-10-18 21:47:02.732073 DEBU:scheduler.cpp:539 pod_client_func recv -> handle message
+2022-10-18 21:47:02.732459 DEBU:scheduler.cpp:474 select faas-share-fn/shufflenet-d1hrv, waiting time: 0.233 ms
+2022-10-18 21:47:02.732519 DEBU:scheduler.cpp:166 faas-share-fn/shufflenet-d1hrv: fallback to static quota, assign quota: 300.000ms
+2022-10-18 21:47:02.732882 DEBU:pod-manager.cpp:599 scheduler_thread_recv_func recv > 0, req_id 1
+2022-10-18 21:47:02.732924 DEBU:pod-manager.cpp:600 req_id 1 complete.
+2022-10-18 21:47:02.732958 DEBU:pod-manager.cpp:613 scheduler_thread_recv_func signal 0, req_id 1
+2022-10-18 21:47:02.733149 DEBU:pod-manager.cpp:411 faas-share-fn/shufflenet-d1hrv scheduler_recv_sync 0, req_id 1
+2022-10-18 21:47:02.733168 DEBU:pod-manager.cpp:414 faas-share-fn/shufflenet-d1hrv wait stop and completed status 0, req_id 1
+2022-10-18 21:47:02.733185 DEBU:pod-manager.cpp:419 faas-share-fn/shufflenet-d1hrv process data and completed status 1, req_id 1
+2022-10-18 21:47:02.733248 DEBU:pod-manager.cpp:429 faas-share-fn/shufflenet-d1hrv processing response data done. completed status 1, req_id 1
+2022-10-18 21:47:02.733267 DEBU:pod-manager.cpp:434 faas-share-fn/shufflenet-d1hrv Success to process data, 1
+2022-10-18 21:47:02.733341 DEBU:pod-manager.cpp:442 faas-share-fn/shufflenet-d1hrv sleeping thread (special) 1, req_id 1
+2022-10-18 21:47:02.733367 DEBU:pod-manager.cpp:446 faas-share-fn/shufflenet-d1hrv quota_state assign 0, req_id 1
+2022-10-18 21:47:02.733414 DEBU:pod-manager.cpp:455 faas-share-fn/shufflenet-d1hrv pthread_cond_broadcast 0, req_id 1
+2022-10-18 21:47:02.733460 DEBU:pod-manager.cpp:461 faas-share-fn/shufflenet-d1hrv sleeping thread clear 0
+2022-10-18 21:47:02.733475 DEBU:pod-manager.cpp:469 faas-share-fn/shufflenet-d1hrv delete hook thread, remaing 0
+2022-10-18 21:47:02.733537 DEBU:pod-manager.cpp:519 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_QUOTA, 0
+2022-10-18 21:47:02.733722 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 0
+2022-10-18 21:47:02.733762 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 1
+2022-10-18 21:47:02.733828 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 1
+2022-10-18 21:47:02.734082 DEBU:pod-manager.cpp:309 GPU memory usage = 2097152 bytes.
+2022-10-18 21:47:02.734129 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 2
+2022-10-18 21:47:02.734185 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 2
+2022-10-18 21:47:02.744701 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 3
+2022-10-18 21:47:02.744844 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 3
+2022-10-18 21:47:02.745136 DEBU:pod-manager.cpp:309 GPU memory usage = 23068672 bytes.
+2022-10-18 21:47:02.745173 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 4
+2022-10-18 21:47:02.745295 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 4
+2022-10-18 21:47:02.777573 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 5
+2022-10-18 21:47:02.777704 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 5
+2022-10-18 21:47:02.777976 DEBU:pod-manager.cpp:309 GPU memory usage = 25165824 bytes.
+2022-10-18 21:47:02.778005 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 6
+2022-10-18 21:47:02.778074 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 6
+2022-10-18 21:47:03.032937 DEBU:scheduler.cpp:509 faas-share-fn/shufflenet-d1hrv didn't return on time
+2022-10-18 21:47:03.033009 DEBU:scheduler.cpp:524 no candidates
+2022-10-18 21:47:04.720716 DEBU:pod-manager.cpp:319 faas-share-fn/shufflenet-d1hrv kernel launch, # 1
+2022-10-18 21:47:04.720786 DEBU:pod-manager.cpp:374 faas-share-fn/shufflenet-d1hrv hook_kernel_launch: quota_state = 1, req_id -2140484600
+2022-10-18 21:47:04.720832 DEBU:pod-manager.cpp:390 faas-share-fn/shufflenet-d1hrv send signal & req_queue_cond 0, req_id 2
+2022-10-18 21:47:04.720852 DEBU:pod-manager.cpp:393 faas-share-fn/shufflenet-d1hrv unlock req_queue_mutex 0, req_id 2
+2022-10-18 21:47:04.720869 DEBU:pod-manager.cpp:399 faas-share-fn/shufflenet-d1hrv check completed status 0, req_id 2
+2022-10-18 21:47:04.720888 DEBU:pod-manager.cpp:404 faas-share-fn/shufflenet-d1hrv scheduler_recv_sync 1, req_id 2
+2022-10-18 21:47:04.721066 DEBU:scheduler.cpp:539 pod_client_func recv -> handle message
+2022-10-18 21:47:04.721284 DEBU:pod-manager.cpp:570 scheduler_thread_send_func recv > 0, 80
+2022-10-18 21:47:04.721329 DEBU:pod-manager.cpp:571 send a kernel launch request, req_id: 2
+2022-10-18 21:47:04.721468 DEBU:scheduler.cpp:474 select faas-share-fn/shufflenet-d1hrv, waiting time: 0.145 ms
+2022-10-18 21:47:04.721613 DEBU:scheduler.cpp:166 faas-share-fn/shufflenet-d1hrv: fallback to static quota, assign quota: 300.000ms
+2022-10-18 21:47:04.721887 DEBU:pod-manager.cpp:599 scheduler_thread_recv_func recv > 0, req_id 2
+2022-10-18 21:47:04.721936 DEBU:pod-manager.cpp:600 req_id 2 complete.
+2022-10-18 21:47:04.721979 DEBU:pod-manager.cpp:613 scheduler_thread_recv_func signal 0, req_id 2
+2022-10-18 21:47:04.722020 DEBU:pod-manager.cpp:411 faas-share-fn/shufflenet-d1hrv scheduler_recv_sync 0, req_id 2
+2022-10-18 21:47:04.722043 DEBU:pod-manager.cpp:414 faas-share-fn/shufflenet-d1hrv wait stop and completed status 0, req_id 2
+2022-10-18 21:47:04.722060 DEBU:pod-manager.cpp:419 faas-share-fn/shufflenet-d1hrv process data and completed status 1, req_id 2
+2022-10-18 21:47:04.722082 DEBU:pod-manager.cpp:429 faas-share-fn/shufflenet-d1hrv processing response data done. completed status 1, req_id 2
+2022-10-18 21:47:04.722124 DEBU:pod-manager.cpp:434 faas-share-fn/shufflenet-d1hrv Success to process data, 2
+2022-10-18 21:47:04.722141 DEBU:pod-manager.cpp:442 faas-share-fn/shufflenet-d1hrv sleeping thread (special) 1, req_id 2
+2022-10-18 21:47:04.722161 DEBU:pod-manager.cpp:446 faas-share-fn/shufflenet-d1hrv quota_state assign 0, req_id 2
+2022-10-18 21:47:04.722178 DEBU:pod-manager.cpp:455 faas-share-fn/shufflenet-d1hrv pthread_cond_broadcast 0, req_id 2
+2022-10-18 21:47:04.722193 DEBU:pod-manager.cpp:461 faas-share-fn/shufflenet-d1hrv sleeping thread clear 0
+2022-10-18 21:47:04.722209 DEBU:pod-manager.cpp:469 faas-share-fn/shufflenet-d1hrv delete hook thread, remaing 0
+2022-10-18 21:47:04.722224 DEBU:pod-manager.cpp:519 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_QUOTA, 7
+2022-10-18 21:47:04.722383 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 7
+2022-10-18 21:47:04.725795 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 8
+2022-10-18 21:47:04.725889 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 8
+2022-10-18 21:47:04.726471 DEBU:pod-manager.cpp:309 GPU memory usage = 25181184 bytes.
+2022-10-18 21:47:04.726500 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 9
+2022-10-18 21:47:04.726559 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 9
+2022-10-18 21:47:04.726920 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 10
+2022-10-18 21:47:04.727002 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 10
+2022-10-18 21:47:04.727203 DEBU:pod-manager.cpp:309 GPU memory usage = 25196544 bytes.
+2022-10-18 21:47:04.727231 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 11
+2022-10-18 21:47:04.727286 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 11
+2022-10-18 21:47:04.727460 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 12
+2022-10-18 21:47:04.727525 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 12
+2022-10-18 21:47:04.727652 DEBU:pod-manager.cpp:309 GPU memory usage = 25211904 bytes.
+2022-10-18 21:47:04.727680 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 13
+2022-10-18 21:47:04.727740 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 13
+2022-10-18 21:47:04.727899 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 14
+2022-10-18 21:47:04.727961 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 14
+2022-10-18 21:47:04.728063 DEBU:pod-manager.cpp:309 GPU memory usage = 25227264 bytes.
+2022-10-18 21:47:04.728108 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 15
+2022-10-18 21:47:04.728161 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 15
+2022-10-18 21:47:05.022020 DEBU:scheduler.cpp:509 faas-share-fn/shufflenet-d1hrv didn't return on time
+2022-10-18 21:47:05.022196 DEBU:scheduler.cpp:524 no candidates
+2022-10-18 21:47:05.077252 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 16
+2022-10-18 21:47:05.077407 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 16
+2022-10-18 21:47:05.077501 DEBU:pod-manager.cpp:309 GPU memory usage = 25227376 bytes.
+2022-10-18 21:47:05.077526 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 17
+2022-10-18 21:47:05.077594 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 17
+2022-10-18 21:47:05.078165 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 18
+2022-10-18 21:47:05.078261 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 18
+2022-10-18 21:47:05.078359 DEBU:pod-manager.cpp:309 GPU memory usage = 25228400 bytes.
+2022-10-18 21:47:05.078378 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 19
+2022-10-18 21:47:05.078471 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 19
+2022-10-18 21:47:05.078502 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 20
+2022-10-18 21:47:05.078574 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 20
+2022-10-18 21:47:05.078606 DEBU:pod-manager.cpp:309 GPU memory usage = 25359472 bytes.
+2022-10-18 21:47:05.078621 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 21
+2022-10-18 21:47:05.078677 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 21
+2022-10-18 21:47:05.079742 DEBU:pod-manager.cpp:319 faas-share-fn/shufflenet-d1hrv kernel launch, # 1
+2022-10-18 21:47:05.079778 DEBU:pod-manager.cpp:374 faas-share-fn/shufflenet-d1hrv hook_kernel_launch: quota_state = 1, req_id -2140484600
+2022-10-18 21:47:05.079814 DEBU:pod-manager.cpp:390 faas-share-fn/shufflenet-d1hrv send signal & req_queue_cond 0, req_id 3
+2022-10-18 21:47:05.079833 DEBU:pod-manager.cpp:393 faas-share-fn/shufflenet-d1hrv unlock req_queue_mutex 0, req_id 3
+2022-10-18 21:47:05.079848 DEBU:pod-manager.cpp:399 faas-share-fn/shufflenet-d1hrv check completed status 0, req_id 3
+2022-10-18 21:47:05.079863 DEBU:pod-manager.cpp:404 faas-share-fn/shufflenet-d1hrv scheduler_recv_sync 1, req_id 3
+2022-10-18 21:47:05.079954 DEBU:pod-manager.cpp:570 scheduler_thread_send_func recv > 0, 80
+2022-10-18 21:47:05.079978 DEBU:scheduler.cpp:539 pod_client_func recv -> handle message
+2022-10-18 21:47:05.080036 DEBU:pod-manager.cpp:571 send a kernel launch request, req_id: 3
+2022-10-18 21:47:05.080149 DEBU:scheduler.cpp:474 select faas-share-fn/shufflenet-d1hrv, waiting time: 0.118 ms
+2022-10-18 21:47:05.080186 DEBU:scheduler.cpp:171 faas-share-fn/shufflenet-d1hrv: burst: 315.432ms, assign quota: 307.716ms
+2022-10-18 21:47:05.080343 DEBU:pod-manager.cpp:599 scheduler_thread_recv_func recv > 0, req_id 3
+2022-10-18 21:47:05.080384 DEBU:pod-manager.cpp:600 req_id 3 complete.
+2022-10-18 21:47:05.080580 DEBU:pod-manager.cpp:613 scheduler_thread_recv_func signal 0, req_id 3
+2022-10-18 21:47:05.080692 DEBU:pod-manager.cpp:411 faas-share-fn/shufflenet-d1hrv scheduler_recv_sync 0, req_id 3
+2022-10-18 21:47:05.080709 DEBU:pod-manager.cpp:414 faas-share-fn/shufflenet-d1hrv wait stop and completed status 0, req_id 3
+2022-10-18 21:47:05.080727 DEBU:pod-manager.cpp:419 faas-share-fn/shufflenet-d1hrv process data and completed status 1, req_id 3
+2022-10-18 21:47:05.080747 DEBU:pod-manager.cpp:429 faas-share-fn/shufflenet-d1hrv processing response data done. completed status 1, req_id 3
+2022-10-18 21:47:05.080767 DEBU:pod-manager.cpp:434 faas-share-fn/shufflenet-d1hrv Success to process data, 3
+2022-10-18 21:47:05.080783 DEBU:pod-manager.cpp:442 faas-share-fn/shufflenet-d1hrv sleeping thread (special) 1, req_id 3
+2022-10-18 21:47:05.080798 DEBU:pod-manager.cpp:446 faas-share-fn/shufflenet-d1hrv quota_state assign 0, req_id 3
+2022-10-18 21:47:05.080812 DEBU:pod-manager.cpp:455 faas-share-fn/shufflenet-d1hrv pthread_cond_broadcast 0, req_id 3
+2022-10-18 21:47:05.080831 DEBU:pod-manager.cpp:461 faas-share-fn/shufflenet-d1hrv sleeping thread clear 0
+2022-10-18 21:47:05.080845 DEBU:pod-manager.cpp:469 faas-share-fn/shufflenet-d1hrv delete hook thread, remaing 0
+2022-10-18 21:47:05.080860 DEBU:pod-manager.cpp:519 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_QUOTA, 22
+2022-10-18 21:47:05.080943 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 22
+2022-10-18 21:47:05.085203 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 23
+2022-10-18 21:47:05.085298 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 23
+2022-10-18 21:47:05.085559 DEBU:pod-manager.cpp:309 GPU memory usage = 27456624 bytes.
+2022-10-18 21:47:05.085586 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 24
+2022-10-18 21:47:05.085641 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 24
+2022-10-18 21:47:05.092830 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 25
+2022-10-18 21:47:05.092914 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 25
+2022-10-18 21:47:05.093173 DEBU:pod-manager.cpp:309 GPU memory usage = 29553776 bytes.
+2022-10-18 21:47:05.093200 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 26
+2022-10-18 21:47:05.093254 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 26
+2022-10-18 21:47:05.097140 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 27
+2022-10-18 21:47:05.097208 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 27
+2022-10-18 21:47:05.097454 DEBU:pod-manager.cpp:309 GPU memory usage = 31650928 bytes.
+2022-10-18 21:47:05.097480 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 28
+2022-10-18 21:47:05.097530 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 28
+2022-10-18 21:47:05.103229 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 29
+2022-10-18 21:47:05.103339 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 29
+2022-10-18 21:47:05.103438 DEBU:pod-manager.cpp:309 GPU memory usage = 31651040 bytes.
+2022-10-18 21:47:05.103455 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 30
+2022-10-18 21:47:05.103507 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 30
+2022-10-18 21:47:05.103651 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 31
+2022-10-18 21:47:05.103705 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 31
+2022-10-18 21:47:05.103746 DEBU:pod-manager.cpp:309 GPU memory usage = 31652064 bytes.
+2022-10-18 21:47:05.103761 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 32
+2022-10-18 21:47:05.103807 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 32
+2022-10-18 21:47:05.103835 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 33
+2022-10-18 21:47:05.103881 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 33
+2022-10-18 21:47:05.103909 DEBU:pod-manager.cpp:309 GPU memory usage = 31783136 bytes.
+2022-10-18 21:47:05.103924 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 34
+2022-10-18 21:47:05.103969 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 34
+2022-10-18 21:47:05.104626 DEBU:pod-manager.cpp:319 faas-share-fn/shufflenet-d1hrv kernel launch, # 1
+2022-10-18 21:47:05.104664 DEBU:pod-manager.cpp:374 faas-share-fn/shufflenet-d1hrv hook_kernel_launch: quota_state = 1, req_id -2140484600
+2022-10-18 21:47:05.104700 DEBU:pod-manager.cpp:390 faas-share-fn/shufflenet-d1hrv send signal & req_queue_cond 0, req_id 4
+2022-10-18 21:47:05.104718 DEBU:pod-manager.cpp:393 faas-share-fn/shufflenet-d1hrv unlock req_queue_mutex 0, req_id 4
+2022-10-18 21:47:05.104733 DEBU:pod-manager.cpp:399 faas-share-fn/shufflenet-d1hrv check completed status 0, req_id 4
+2022-10-18 21:47:05.104748 DEBU:pod-manager.cpp:404 faas-share-fn/shufflenet-d1hrv scheduler_recv_sync 1, req_id 4
+2022-10-18 21:47:05.104869 DEBU:pod-manager.cpp:570 scheduler_thread_send_func recv > 0, 80
+2022-10-18 21:47:05.104890 DEBU:pod-manager.cpp:571 send a kernel launch request, req_id: 4
+2022-10-18 21:47:05.104945 DEBU:scheduler.cpp:539 pod_client_func recv -> handle message
+2022-10-18 21:47:05.105086 DEBU:scheduler.cpp:474 select faas-share-fn/shufflenet-d1hrv, waiting time: 0.090 ms
+2022-10-18 21:47:05.105142 DEBU:scheduler.cpp:171 faas-share-fn/shufflenet-d1hrv: burst: 315.432ms, assign quota: 311.574ms
+2022-10-18 21:47:05.105289 DEBU:pod-manager.cpp:599 scheduler_thread_recv_func recv > 0, req_id 4
+2022-10-18 21:47:05.105325 DEBU:pod-manager.cpp:600 req_id 4 complete.
+2022-10-18 21:47:05.105361 DEBU:pod-manager.cpp:613 scheduler_thread_recv_func signal 0, req_id 4
+2022-10-18 21:47:05.105396 DEBU:pod-manager.cpp:411 faas-share-fn/shufflenet-d1hrv scheduler_recv_sync 0, req_id 4
+2022-10-18 21:47:05.105421 DEBU:pod-manager.cpp:414 faas-share-fn/shufflenet-d1hrv wait stop and completed status 0, req_id 4
+2022-10-18 21:47:05.105438 DEBU:pod-manager.cpp:419 faas-share-fn/shufflenet-d1hrv process data and completed status 1, req_id 4
+2022-10-18 21:47:05.105461 DEBU:pod-manager.cpp:429 faas-share-fn/shufflenet-d1hrv processing response data done. completed status 1, req_id 4
+2022-10-18 21:47:05.105478 DEBU:pod-manager.cpp:434 faas-share-fn/shufflenet-d1hrv Success to process data, 4
+2022-10-18 21:47:05.105494 DEBU:pod-manager.cpp:442 faas-share-fn/shufflenet-d1hrv sleeping thread (special) 1, req_id 4
+2022-10-18 21:47:05.105513 DEBU:pod-manager.cpp:446 faas-share-fn/shufflenet-d1hrv quota_state assign 0, req_id 4
+2022-10-18 21:47:05.105529 DEBU:pod-manager.cpp:455 faas-share-fn/shufflenet-d1hrv pthread_cond_broadcast 0, req_id 4
+2022-10-18 21:47:05.105549 DEBU:pod-manager.cpp:461 faas-share-fn/shufflenet-d1hrv sleeping thread clear 0
+2022-10-18 21:47:05.105563 DEBU:pod-manager.cpp:469 faas-share-fn/shufflenet-d1hrv delete hook thread, remaing 0
+2022-10-18 21:47:05.105578 DEBU:pod-manager.cpp:519 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_QUOTA, 35
+2022-10-18 21:47:05.105648 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 35
+2022-10-18 21:47:05.416965 DEBU:scheduler.cpp:509 faas-share-fn/shufflenet-d1hrv didn't return on time
+2022-10-18 21:47:05.417027 DEBU:scheduler.cpp:524 no candidates
+2022-10-18 21:47:56.239116 DEBU:pod-manager.cpp:319 faas-share-fn/shufflenet-d1hrv kernel launch, # 1
+2022-10-18 21:47:56.239178 DEBU:pod-manager.cpp:374 faas-share-fn/shufflenet-d1hrv hook_kernel_launch: quota_state = 1, req_id -2140484600
+2022-10-18 21:47:56.239217 DEBU:pod-manager.cpp:390 faas-share-fn/shufflenet-d1hrv send signal & req_queue_cond 0, req_id 5
+2022-10-18 21:47:56.239234 DEBU:pod-manager.cpp:393 faas-share-fn/shufflenet-d1hrv unlock req_queue_mutex 0, req_id 5
+2022-10-18 21:47:56.239249 DEBU:pod-manager.cpp:399 faas-share-fn/shufflenet-d1hrv check completed status 0, req_id 5
+2022-10-18 21:47:56.239265 DEBU:pod-manager.cpp:404 faas-share-fn/shufflenet-d1hrv scheduler_recv_sync 1, req_id 5
+2022-10-18 21:47:56.239348 DEBU:pod-manager.cpp:570 scheduler_thread_send_func recv > 0, 80
+2022-10-18 21:47:56.239374 DEBU:pod-manager.cpp:571 send a kernel launch request, req_id: 5
+2022-10-18 21:47:56.239468 DEBU:scheduler.cpp:539 pod_client_func recv -> handle message
+2022-10-18 21:47:56.239699 DEBU:scheduler.cpp:474 select faas-share-fn/shufflenet-d1hrv, waiting time: 0.095 ms
+2022-10-18 21:47:56.239743 DEBU:scheduler.cpp:166 faas-share-fn/shufflenet-d1hrv: fallback to static quota, assign quota: 300.000ms
+2022-10-18 21:47:56.239953 DEBU:pod-manager.cpp:599 scheduler_thread_recv_func recv > 0, req_id 5
+2022-10-18 21:47:56.239997 DEBU:pod-manager.cpp:600 req_id 5 complete.
+2022-10-18 21:47:56.240038 DEBU:pod-manager.cpp:613 scheduler_thread_recv_func signal 0, req_id 5
+2022-10-18 21:47:56.240085 DEBU:pod-manager.cpp:411 faas-share-fn/shufflenet-d1hrv scheduler_recv_sync 0, req_id 5
+2022-10-18 21:47:56.240124 DEBU:pod-manager.cpp:414 faas-share-fn/shufflenet-d1hrv wait stop and completed status 0, req_id 5
+2022-10-18 21:47:56.240143 DEBU:pod-manager.cpp:419 faas-share-fn/shufflenet-d1hrv process data and completed status 1, req_id 5
+2022-10-18 21:47:56.240165 DEBU:pod-manager.cpp:429 faas-share-fn/shufflenet-d1hrv processing response data done. completed status 1, req_id 5
+2022-10-18 21:47:56.240192 DEBU:pod-manager.cpp:434 faas-share-fn/shufflenet-d1hrv Success to process data, 5
+2022-10-18 21:47:56.240208 DEBU:pod-manager.cpp:442 faas-share-fn/shufflenet-d1hrv sleeping thread (special) 1, req_id 5
+2022-10-18 21:47:56.240223 DEBU:pod-manager.cpp:446 faas-share-fn/shufflenet-d1hrv quota_state assign 0, req_id 5
+2022-10-18 21:47:56.240238 DEBU:pod-manager.cpp:455 faas-share-fn/shufflenet-d1hrv pthread_cond_broadcast 0, req_id 5
+2022-10-18 21:47:56.240253 DEBU:pod-manager.cpp:461 faas-share-fn/shufflenet-d1hrv sleeping thread clear 0
+2022-10-18 21:47:56.240268 DEBU:pod-manager.cpp:469 faas-share-fn/shufflenet-d1hrv delete hook thread, remaing 0
+2022-10-18 21:47:56.240283 DEBU:pod-manager.cpp:519 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_QUOTA, 36
+2022-10-18 21:47:56.240389 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 36
+2022-10-18 21:47:56.243931 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 37
+2022-10-18 21:47:56.244038 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 37
+2022-10-18 21:47:56.244278 DEBU:pod-manager.cpp:309 GPU memory usage = 31798496 bytes.
+2022-10-18 21:47:56.244304 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 38
+2022-10-18 21:47:56.244374 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 38
+2022-10-18 21:47:56.244543 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 39
+2022-10-18 21:47:56.244658 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 39
+2022-10-18 21:47:56.244769 DEBU:pod-manager.cpp:309 GPU memory usage = 31813856 bytes.
+2022-10-18 21:47:56.244793 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 40
+2022-10-18 21:47:56.244859 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 40
+2022-10-18 21:47:56.244995 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 41
+2022-10-18 21:47:56.245069 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 41
+2022-10-18 21:47:56.245163 DEBU:pod-manager.cpp:309 GPU memory usage = 31829216 bytes.
+2022-10-18 21:47:56.245187 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 42
+2022-10-18 21:47:56.245252 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 42
+2022-10-18 21:47:56.245319 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 43
+2022-10-18 21:47:56.245381 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 43
+2022-10-18 21:47:56.245435 DEBU:pod-manager.cpp:309 GPU memory usage = 31844576 bytes.
+2022-10-18 21:47:56.245451 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 44
+2022-10-18 21:47:56.245510 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 44
+2022-10-18 21:47:56.245858 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 45
+2022-10-18 21:47:56.245933 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 45
+2022-10-18 21:47:56.246108 DEBU:pod-manager.cpp:309 GPU memory usage = 31844688 bytes.
+2022-10-18 21:47:56.246133 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 46
+2022-10-18 21:47:56.246217 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 46
+2022-10-18 21:47:56.246624 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 47
+2022-10-18 21:47:56.246688 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 47
+2022-10-18 21:47:56.246821 DEBU:pod-manager.cpp:309 GPU memory usage = 31845712 bytes.
+2022-10-18 21:47:56.246839 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 48
+2022-10-18 21:47:56.246891 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 48
+2022-10-18 21:47:56.247009 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 49
+2022-10-18 21:47:56.247067 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 49
+2022-10-18 21:47:56.247169 DEBU:pod-manager.cpp:309 GPU memory usage = 31976784 bytes.
+2022-10-18 21:47:56.247185 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 50
+2022-10-18 21:47:56.247235 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 50
+2022-10-18 21:47:56.249554 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 51
+2022-10-18 21:47:56.249619 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 51
+2022-10-18 21:47:56.249975 DEBU:pod-manager.cpp:309 GPU memory usage = 31992144 bytes.
+2022-10-18 21:47:56.250007 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 52
+2022-10-18 21:47:56.250407 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 52
+2022-10-18 21:47:56.250454 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 53
+2022-10-18 21:47:56.250553 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 53
+2022-10-18 21:47:56.250765 DEBU:pod-manager.cpp:309 GPU memory usage = 32007504 bytes.
+2022-10-18 21:47:56.250799 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 54
+2022-10-18 21:47:56.251131 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 54
+2022-10-18 21:47:56.251256 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 55
+2022-10-18 21:47:56.251529 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 55
+2022-10-18 21:47:56.251645 DEBU:pod-manager.cpp:309 GPU memory usage = 32022864 bytes.
+2022-10-18 21:47:56.251668 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 56
+2022-10-18 21:47:56.251818 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 56
+2022-10-18 21:47:56.252085 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 57
+2022-10-18 21:47:56.252312 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 57
+2022-10-18 21:47:56.252458 DEBU:pod-manager.cpp:309 GPU memory usage = 32038224 bytes.
+2022-10-18 21:47:56.252550 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 58
+2022-10-18 21:47:56.252981 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 58
+2022-10-18 21:47:56.253024 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 59
+2022-10-18 21:47:56.253142 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 59
+2022-10-18 21:47:56.253354 DEBU:pod-manager.cpp:309 GPU memory usage = 32038336 bytes.
+2022-10-18 21:47:56.253387 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 60
+2022-10-18 21:47:56.253580 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 60
+2022-10-18 21:47:56.253990 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 61
+2022-10-18 21:47:56.254203 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 61
+2022-10-18 21:47:56.254441 DEBU:pod-manager.cpp:309 GPU memory usage = 32039360 bytes.
+2022-10-18 21:47:56.254470 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 62
+2022-10-18 21:47:56.254574 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 62
+2022-10-18 21:47:56.254693 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 63
+2022-10-18 21:47:56.254796 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 63
+2022-10-18 21:47:56.255283 DEBU:pod-manager.cpp:309 GPU memory usage = 32170432 bytes.
+2022-10-18 21:47:56.255311 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 64
+2022-10-18 21:47:56.255400 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 64
+2022-10-18 21:47:56.257356 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 65
+2022-10-18 21:47:56.257464 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 65
+2022-10-18 21:47:56.257584 DEBU:pod-manager.cpp:309 GPU memory usage = 32185792 bytes.
+2022-10-18 21:47:56.257612 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 66
+2022-10-18 21:47:56.257710 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 66
+2022-10-18 21:47:56.257895 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 67
+2022-10-18 21:47:56.257998 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 67
+2022-10-18 21:47:56.258127 DEBU:pod-manager.cpp:309 GPU memory usage = 32201152 bytes.
+2022-10-18 21:47:56.258178 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 68
+2022-10-18 21:47:56.258274 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 68
+2022-10-18 21:47:56.258373 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 69
+2022-10-18 21:47:56.258459 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 69
+2022-10-18 21:47:56.258553 DEBU:pod-manager.cpp:309 GPU memory usage = 32216512 bytes.
+2022-10-18 21:47:56.258579 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 70
+2022-10-18 21:47:56.258663 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 70
+2022-10-18 21:47:56.258804 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 71
+2022-10-18 21:47:56.258898 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 71
+2022-10-18 21:47:56.258995 DEBU:pod-manager.cpp:309 GPU memory usage = 32231872 bytes.
+2022-10-18 21:47:56.259022 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 72
+2022-10-18 21:47:56.259151 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 72
+2022-10-18 21:47:56.259342 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 73
+2022-10-18 21:47:56.259438 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 73
+2022-10-18 21:47:56.259537 DEBU:pod-manager.cpp:309 GPU memory usage = 32231984 bytes.
+2022-10-18 21:47:56.259563 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 74
+2022-10-18 21:47:56.259645 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 74
+2022-10-18 21:47:56.260025 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 75
+2022-10-18 21:47:56.260138 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 75
+2022-10-18 21:47:56.260236 DEBU:pod-manager.cpp:309 GPU memory usage = 32233008 bytes.
+2022-10-18 21:47:56.260264 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 76
+2022-10-18 21:47:56.260347 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 76
+2022-10-18 21:47:56.260467 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 77
+2022-10-18 21:47:56.260560 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 77
+2022-10-18 21:47:56.260660 DEBU:pod-manager.cpp:309 GPU memory usage = 32364080 bytes.
+2022-10-18 21:47:56.260677 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 78
+2022-10-18 21:47:56.260764 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 78
+2022-10-18 21:47:56.264637 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 79
+2022-10-18 21:47:56.264743 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 79
+2022-10-18 21:47:56.265328 DEBU:pod-manager.cpp:309 GPU memory usage = 34461232 bytes.
+2022-10-18 21:47:56.265356 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 80
+2022-10-18 21:47:56.265445 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 80
+2022-10-18 21:47:56.269207 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 81
+2022-10-18 21:47:56.269312 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 81
+2022-10-18 21:47:56.269753 DEBU:pod-manager.cpp:309 GPU memory usage = 36558384 bytes.
+2022-10-18 21:47:56.269785 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 82
+2022-10-18 21:47:56.269923 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 82
+2022-10-18 21:47:56.274284 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 83
+2022-10-18 21:47:56.274432 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 83
+2022-10-18 21:47:56.274869 DEBU:pod-manager.cpp:309 GPU memory usage = 38655536 bytes.
+2022-10-18 21:47:56.274901 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 84
+2022-10-18 21:47:56.275055 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 84
+2022-10-18 21:47:56.279502 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 85
+2022-10-18 21:47:56.279717 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 85
+2022-10-18 21:47:56.280013 DEBU:pod-manager.cpp:309 GPU memory usage = 40752688 bytes.
+2022-10-18 21:47:56.280046 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 86
+2022-10-18 21:47:56.280405 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 86
+2022-10-18 21:47:56.284474 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 87
+2022-10-18 21:47:56.284699 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 87
+2022-10-18 21:47:56.285281 DEBU:pod-manager.cpp:309 GPU memory usage = 42849840 bytes.
+2022-10-18 21:47:56.285303 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 88
+2022-10-18 21:47:56.285364 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 88
+2022-10-18 21:47:56.290469 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 89
+2022-10-18 21:47:56.290562 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 89
+2022-10-18 21:47:56.291111 DEBU:pod-manager.cpp:309 GPU memory usage = 44946992 bytes.
+2022-10-18 21:47:56.291134 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 90
+2022-10-18 21:47:56.291181 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 90
+2022-10-18 21:47:56.296242 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 91
+2022-10-18 21:47:56.296312 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 91
+2022-10-18 21:47:56.296838 DEBU:pod-manager.cpp:309 GPU memory usage = 47044144 bytes.
+2022-10-18 21:47:56.296869 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 92
+2022-10-18 21:47:56.296913 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 92
+2022-10-18 21:47:56.302581 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 93
+2022-10-18 21:47:56.302651 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 93
+2022-10-18 21:47:56.303123 DEBU:pod-manager.cpp:309 GPU memory usage = 49141296 bytes.
+2022-10-18 21:47:56.303141 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 94
+2022-10-18 21:47:56.303170 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 94
+2022-10-18 21:47:56.308938 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 95
+2022-10-18 21:47:56.309010 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 95
+2022-10-18 21:47:56.309407 DEBU:pod-manager.cpp:309 GPU memory usage = 51238448 bytes.
+2022-10-18 21:47:56.309423 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 96
+2022-10-18 21:47:56.309455 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 96
+2022-10-18 21:47:56.313794 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 97
+2022-10-18 21:47:56.313834 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 97
+2022-10-18 21:47:56.314164 DEBU:pod-manager.cpp:309 GPU memory usage = 53335600 bytes.
+2022-10-18 21:47:56.314183 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 98
+2022-10-18 21:47:56.314205 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 98
+2022-10-18 21:47:56.318698 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 99
+2022-10-18 21:47:56.318753 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 99
+2022-10-18 21:47:56.319074 DEBU:pod-manager.cpp:309 GPU memory usage = 55432752 bytes.
+2022-10-18 21:47:56.319095 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 100
+2022-10-18 21:47:56.319118 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 100
+2022-10-18 21:47:56.325799 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 101
+2022-10-18 21:47:56.325855 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 101
+2022-10-18 21:47:56.326144 DEBU:pod-manager.cpp:309 GPU memory usage = 57529904 bytes.
+2022-10-18 21:47:56.326156 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 102
+2022-10-18 21:47:56.326180 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 102
+2022-10-18 21:47:56.332125 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 103
+2022-10-18 21:47:56.332163 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 103
+2022-10-18 21:47:56.332241 DEBU:pod-manager.cpp:309 GPU memory usage = 57530016 bytes.
+2022-10-18 21:47:56.332250 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 104
+2022-10-18 21:47:56.332267 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 104
+2022-10-18 21:47:56.332506 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 105
+2022-10-18 21:47:56.332532 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 105
+2022-10-18 21:47:56.332607 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 106
+2022-10-18 21:47:56.332635 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 106
+2022-10-18 21:47:56.332691 DEBU:pod-manager.cpp:309 GPU memory usage = 57531040 bytes.
+2022-10-18 21:47:56.332697 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 107
+2022-10-18 21:47:56.332714 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 107
+2022-10-18 21:47:56.332900 DEBU:pod-manager.cpp:309 GPU memory usage = 59628192 bytes.
+2022-10-18 21:47:56.332912 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 108
+2022-10-18 21:47:56.332936 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 108
+2022-10-18 21:47:56.332983 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 109
+2022-10-18 21:47:56.333004 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 109
+2022-10-18 21:47:56.333060 DEBU:pod-manager.cpp:309 GPU memory usage = 59759264 bytes.
+2022-10-18 21:47:56.333071 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 110
+2022-10-18 21:47:56.333095 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 110
+2022-10-18 21:47:56.333706 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 111
+2022-10-18 21:47:56.333747 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 111
+2022-10-18 21:47:56.333848 DEBU:pod-manager.cpp:309 GPU memory usage = 59759376 bytes.
+2022-10-18 21:47:56.333855 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 112
+2022-10-18 21:47:56.333877 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 112
+2022-10-18 21:47:56.334742 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 113
+2022-10-18 21:47:56.334898 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 113
+2022-10-18 21:47:56.335156 DEBU:pod-manager.cpp:309 GPU memory usage = 59760400 bytes.
+2022-10-18 21:47:56.335222 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 114
+2022-10-18 21:47:56.335297 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 114
+2022-10-18 21:47:56.335448 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 115
+2022-10-18 21:47:56.335513 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 115
+2022-10-18 21:47:56.335679 DEBU:pod-manager.cpp:309 GPU memory usage = 59891472 bytes.
+2022-10-18 21:47:56.335705 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 116
+2022-10-18 21:47:56.335792 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 116
+2022-10-18 21:47:56.342495 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 117
+2022-10-18 21:47:56.342637 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 117
+2022-10-18 21:47:56.342706 DEBU:pod-manager.cpp:309 GPU memory usage = 59891584 bytes.
+2022-10-18 21:47:56.342748 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 118
+2022-10-18 21:47:56.342805 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 118
+2022-10-18 21:47:56.342967 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 119
+2022-10-18 21:47:56.343034 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 119
+2022-10-18 21:47:56.343133 DEBU:pod-manager.cpp:309 GPU memory usage = 59892608 bytes.
+2022-10-18 21:47:56.343153 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 120
+2022-10-18 21:47:56.343208 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 120
+2022-10-18 21:47:56.343336 DEBU:pod-manager.cpp:504 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_LIMIT, 121
+2022-10-18 21:47:56.343395 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 121
+2022-10-18 21:47:56.343428 DEBU:pod-manager.cpp:309 GPU memory usage = 60023680 bytes.
+2022-10-18 21:47:56.343443 DEBU:pod-manager.cpp:511 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_MEM_UPDATE, 122
+2022-10-18 21:47:56.343520 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 122
+2022-10-18 21:47:56.540021 DEBU:scheduler.cpp:509 faas-share-fn/shufflenet-d1hrv didn't return on time
+2022-10-18 21:47:56.540073 DEBU:scheduler.cpp:524 no candidates
+2022-10-18 21:47:56.540951 DEBU:pod-manager.cpp:319 faas-share-fn/shufflenet-d1hrv kernel launch, # 1
+2022-10-18 21:47:56.540994 DEBU:pod-manager.cpp:374 faas-share-fn/shufflenet-d1hrv hook_kernel_launch: quota_state = 1, req_id -2140484600
+2022-10-18 21:47:56.541029 DEBU:pod-manager.cpp:390 faas-share-fn/shufflenet-d1hrv send signal & req_queue_cond 0, req_id 6
+2022-10-18 21:47:56.541055 DEBU:pod-manager.cpp:393 faas-share-fn/shufflenet-d1hrv unlock req_queue_mutex 0, req_id 6
+2022-10-18 21:47:56.541119 DEBU:pod-manager.cpp:570 scheduler_thread_send_func recv > 0, 80
+2022-10-18 21:47:56.541137 DEBU:pod-manager.cpp:571 send a kernel launch request, req_id: 6
+2022-10-18 21:47:56.541162 DEBU:scheduler.cpp:539 pod_client_func recv -> handle message
+2022-10-18 21:47:56.541302 DEBU:pod-manager.cpp:399 faas-share-fn/shufflenet-d1hrv check completed status 0, req_id 6
+2022-10-18 21:47:56.541327 DEBU:pod-manager.cpp:404 faas-share-fn/shufflenet-d1hrv scheduler_recv_sync 1, req_id 6
+2022-10-18 21:47:56.541375 DEBU:scheduler.cpp:474 select faas-share-fn/shufflenet-d1hrv, waiting time: 0.169 ms
+2022-10-18 21:47:56.541575 DEBU:scheduler.cpp:171 faas-share-fn/shufflenet-d1hrv: burst: 300.206ms, assign quota: 300.103ms
+2022-10-18 21:47:56.541775 DEBU:pod-manager.cpp:599 scheduler_thread_recv_func recv > 0, req_id 6
+2022-10-18 21:47:56.541815 DEBU:pod-manager.cpp:600 req_id 6 complete.
+2022-10-18 21:47:56.541855 DEBU:pod-manager.cpp:613 scheduler_thread_recv_func signal 0, req_id 6
+2022-10-18 21:47:56.541884 DEBU:pod-manager.cpp:411 faas-share-fn/shufflenet-d1hrv scheduler_recv_sync 0, req_id 6
+2022-10-18 21:47:56.541912 DEBU:pod-manager.cpp:414 faas-share-fn/shufflenet-d1hrv wait stop and completed status 0, req_id 6
+2022-10-18 21:47:56.541930 DEBU:pod-manager.cpp:419 faas-share-fn/shufflenet-d1hrv process data and completed status 1, req_id 6
+2022-10-18 21:47:56.541951 DEBU:pod-manager.cpp:429 faas-share-fn/shufflenet-d1hrv processing response data done. completed status 1, req_id 6
+2022-10-18 21:47:56.541969 DEBU:pod-manager.cpp:434 faas-share-fn/shufflenet-d1hrv Success to process data, 6
+2022-10-18 21:47:56.541993 DEBU:pod-manager.cpp:442 faas-share-fn/shufflenet-d1hrv sleeping thread (special) 1, req_id 6
+2022-10-18 21:47:56.542008 DEBU:pod-manager.cpp:446 faas-share-fn/shufflenet-d1hrv quota_state assign 0, req_id 6
+2022-10-18 21:47:56.542024 DEBU:pod-manager.cpp:455 faas-share-fn/shufflenet-d1hrv pthread_cond_broadcast 0, req_id 6
+2022-10-18 21:47:56.542038 DEBU:pod-manager.cpp:461 faas-share-fn/shufflenet-d1hrv sleeping thread clear 0
+2022-10-18 21:47:56.542053 DEBU:pod-manager.cpp:469 faas-share-fn/shufflenet-d1hrv delete hook thread, remaing 0
+2022-10-18 21:47:56.542068 DEBU:pod-manager.cpp:519 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_QUOTA, 123
+2022-10-18 21:47:56.542179 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 123
+2022-10-18 21:47:56.842154 DEBU:scheduler.cpp:509 faas-share-fn/shufflenet-d1hrv didn't return on time
+2022-10-18 21:47:56.842215 DEBU:scheduler.cpp:524 no candidates
+2022-10-18 21:47:56.843461 DEBU:pod-manager.cpp:319 faas-share-fn/shufflenet-d1hrv kernel launch, # 1
+2022-10-18 21:47:56.843516 DEBU:pod-manager.cpp:374 faas-share-fn/shufflenet-d1hrv hook_kernel_launch: quota_state = 1, req_id -2140484600
+2022-10-18 21:47:56.843555 DEBU:pod-manager.cpp:390 faas-share-fn/shufflenet-d1hrv send signal & req_queue_cond 0, req_id 7
+2022-10-18 21:47:56.843571 DEBU:pod-manager.cpp:393 faas-share-fn/shufflenet-d1hrv unlock req_queue_mutex 0, req_id 7
+2022-10-18 21:47:56.843586 DEBU:pod-manager.cpp:399 faas-share-fn/shufflenet-d1hrv check completed status 0, req_id 7
+2022-10-18 21:47:56.843600 DEBU:pod-manager.cpp:404 faas-share-fn/shufflenet-d1hrv scheduler_recv_sync 1, req_id 7
+2022-10-18 21:47:56.843688 DEBU:scheduler.cpp:539 pod_client_func recv -> handle message
+2022-10-18 21:47:56.843686 DEBU:pod-manager.cpp:570 scheduler_thread_send_func recv > 0, 80
+2022-10-18 21:47:56.843715 DEBU:pod-manager.cpp:571 send a kernel launch request, req_id: 7
+2022-10-18 21:47:56.843822 DEBU:scheduler.cpp:474 select faas-share-fn/shufflenet-d1hrv, waiting time: 0.091 ms
+2022-10-18 21:47:56.843846 DEBU:scheduler.cpp:171 faas-share-fn/shufflenet-d1hrv: burst: 602.165ms, assign quota: 451.134ms
+2022-10-18 21:47:56.844204 DEBU:pod-manager.cpp:599 scheduler_thread_recv_func recv > 0, req_id 7
+2022-10-18 21:47:56.844297 DEBU:pod-manager.cpp:600 req_id 7 complete.
+2022-10-18 21:47:56.844588 DEBU:pod-manager.cpp:613 scheduler_thread_recv_func signal 0, req_id 7
+2022-10-18 21:47:56.844779 DEBU:pod-manager.cpp:411 faas-share-fn/shufflenet-d1hrv scheduler_recv_sync 0, req_id 7
+2022-10-18 21:47:56.844803 DEBU:pod-manager.cpp:414 faas-share-fn/shufflenet-d1hrv wait stop and completed status 0, req_id 7
+2022-10-18 21:47:56.844821 DEBU:pod-manager.cpp:419 faas-share-fn/shufflenet-d1hrv process data and completed status 1, req_id 7
+2022-10-18 21:47:56.844842 DEBU:pod-manager.cpp:429 faas-share-fn/shufflenet-d1hrv processing response data done. completed status 1, req_id 7
+2022-10-18 21:47:56.844858 DEBU:pod-manager.cpp:434 faas-share-fn/shufflenet-d1hrv Success to process data, 7
+2022-10-18 21:47:56.844874 DEBU:pod-manager.cpp:442 faas-share-fn/shufflenet-d1hrv sleeping thread (special) 1, req_id 7
+2022-10-18 21:47:56.844888 DEBU:pod-manager.cpp:446 faas-share-fn/shufflenet-d1hrv quota_state assign 0, req_id 7
+2022-10-18 21:47:56.844903 DEBU:pod-manager.cpp:455 faas-share-fn/shufflenet-d1hrv pthread_cond_broadcast 0, req_id 7
+2022-10-18 21:47:56.844917 DEBU:pod-manager.cpp:461 faas-share-fn/shufflenet-d1hrv sleeping thread clear 0
+2022-10-18 21:47:56.844944 DEBU:pod-manager.cpp:469 faas-share-fn/shufflenet-d1hrv delete hook thread, remaing 0
+2022-10-18 21:47:56.844958 DEBU:pod-manager.cpp:519 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_QUOTA, 124
+2022-10-18 21:47:56.845082 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 124
+2022-10-18 21:47:57.295253 DEBU:scheduler.cpp:509 faas-share-fn/shufflenet-d1hrv didn't return on time
+2022-10-18 21:47:57.295317 DEBU:scheduler.cpp:524 no candidates
+2022-10-18 21:47:57.296699 DEBU:pod-manager.cpp:319 faas-share-fn/shufflenet-d1hrv kernel launch, # 1
+2022-10-18 21:47:57.296756 DEBU:pod-manager.cpp:374 faas-share-fn/shufflenet-d1hrv hook_kernel_launch: quota_state = 1, req_id -2140484600
+2022-10-18 21:47:57.296792 DEBU:pod-manager.cpp:390 faas-share-fn/shufflenet-d1hrv send signal & req_queue_cond 0, req_id 8
+2022-10-18 21:47:57.296822 DEBU:pod-manager.cpp:393 faas-share-fn/shufflenet-d1hrv unlock req_queue_mutex 0, req_id 8
+2022-10-18 21:47:57.296856 DEBU:pod-manager.cpp:399 faas-share-fn/shufflenet-d1hrv check completed status 0, req_id 8
+2022-10-18 21:47:57.296879 DEBU:pod-manager.cpp:570 scheduler_thread_send_func recv > 0, 80
+2022-10-18 21:47:57.296885 DEBU:scheduler.cpp:539 pod_client_func recv -> handle message
+2022-10-18 21:47:57.296895 DEBU:pod-manager.cpp:571 send a kernel launch request, req_id: 8
+2022-10-18 21:47:57.296948 DEBU:pod-manager.cpp:404 faas-share-fn/shufflenet-d1hrv scheduler_recv_sync 1, req_id 8
+2022-10-18 21:47:57.297020 DEBU:scheduler.cpp:474 select faas-share-fn/shufflenet-d1hrv, waiting time: 0.094 ms
+2022-10-18 21:47:57.297046 DEBU:scheduler.cpp:171 faas-share-fn/shufflenet-d1hrv: burst: 602.165ms, assign quota: 526.649ms
+2022-10-18 21:47:57.297282 DEBU:pod-manager.cpp:599 scheduler_thread_recv_func recv > 0, req_id 8
+2022-10-18 21:47:57.297326 DEBU:pod-manager.cpp:600 req_id 8 complete.
+2022-10-18 21:47:57.297359 DEBU:pod-manager.cpp:613 scheduler_thread_recv_func signal 0, req_id 8
+2022-10-18 21:47:57.297388 DEBU:pod-manager.cpp:411 faas-share-fn/shufflenet-d1hrv scheduler_recv_sync 0, req_id 8
+2022-10-18 21:47:57.297414 DEBU:pod-manager.cpp:414 faas-share-fn/shufflenet-d1hrv wait stop and completed status 0, req_id 8
+2022-10-18 21:47:57.297433 DEBU:pod-manager.cpp:419 faas-share-fn/shufflenet-d1hrv process data and completed status 1, req_id 8
+2022-10-18 21:47:57.297492 DEBU:pod-manager.cpp:429 faas-share-fn/shufflenet-d1hrv processing response data done. completed status 1, req_id 8
+2022-10-18 21:47:57.297519 DEBU:pod-manager.cpp:434 faas-share-fn/shufflenet-d1hrv Success to process data, 8
+2022-10-18 21:47:57.297571 DEBU:pod-manager.cpp:442 faas-share-fn/shufflenet-d1hrv sleeping thread (special) 1, req_id 8
+2022-10-18 21:47:57.297597 DEBU:pod-manager.cpp:446 faas-share-fn/shufflenet-d1hrv quota_state assign 0, req_id 8
+2022-10-18 21:47:57.297612 DEBU:pod-manager.cpp:455 faas-share-fn/shufflenet-d1hrv pthread_cond_broadcast 0, req_id 8
+2022-10-18 21:47:57.297820 DEBU:pod-manager.cpp:461 faas-share-fn/shufflenet-d1hrv sleeping thread clear 0
+2022-10-18 21:47:57.297884 DEBU:pod-manager.cpp:469 faas-share-fn/shufflenet-d1hrv delete hook thread, remaing 0
+2022-10-18 21:47:57.297898 DEBU:pod-manager.cpp:519 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_QUOTA, 125
+2022-10-18 21:47:57.298156 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 125
+2022-10-18 21:47:57.824111 DEBU:scheduler.cpp:509 faas-share-fn/shufflenet-d1hrv didn't return on time
+2022-10-18 21:47:57.824201 DEBU:scheduler.cpp:524 no candidates
+2022-10-18 21:47:57.825056 DEBU:pod-manager.cpp:319 faas-share-fn/shufflenet-d1hrv kernel launch, # 1
+2022-10-18 21:47:57.825126 DEBU:pod-manager.cpp:374 faas-share-fn/shufflenet-d1hrv hook_kernel_launch: quota_state = 1, req_id -2140484600
+2022-10-18 21:47:57.825164 DEBU:pod-manager.cpp:390 faas-share-fn/shufflenet-d1hrv send signal & req_queue_cond 0, req_id 9
+2022-10-18 21:47:57.825182 DEBU:pod-manager.cpp:393 faas-share-fn/shufflenet-d1hrv unlock req_queue_mutex 0, req_id 9
+2022-10-18 21:47:57.825196 DEBU:pod-manager.cpp:399 faas-share-fn/shufflenet-d1hrv check completed status 0, req_id 9
+2022-10-18 21:47:57.825211 DEBU:pod-manager.cpp:404 faas-share-fn/shufflenet-d1hrv scheduler_recv_sync 1, req_id 9
+2022-10-18 21:47:57.825283 DEBU:pod-manager.cpp:570 scheduler_thread_send_func recv > 0, 80
+2022-10-18 21:47:57.825315 DEBU:pod-manager.cpp:571 send a kernel launch request, req_id: 9
+2022-10-18 21:47:57.825463 DEBU:scheduler.cpp:539 pod_client_func recv -> handle message
+2022-10-18 21:47:57.825641 DEBU:scheduler.cpp:474 select faas-share-fn/shufflenet-d1hrv, waiting time: 0.105 ms
+2022-10-18 21:47:57.825678 DEBU:scheduler.cpp:171 faas-share-fn/shufflenet-d1hrv: burst: 979.778ms, assign quota: 753.214ms
+2022-10-18 21:47:57.825843 DEBU:pod-manager.cpp:599 scheduler_thread_recv_func recv > 0, req_id 9
+2022-10-18 21:47:57.825890 DEBU:pod-manager.cpp:600 req_id 9 complete.
+2022-10-18 21:47:57.825925 DEBU:pod-manager.cpp:613 scheduler_thread_recv_func signal 0, req_id 9
+2022-10-18 21:47:57.825952 DEBU:pod-manager.cpp:411 faas-share-fn/shufflenet-d1hrv scheduler_recv_sync 0, req_id 9
+2022-10-18 21:47:57.826010 DEBU:pod-manager.cpp:414 faas-share-fn/shufflenet-d1hrv wait stop and completed status 0, req_id 9
+2022-10-18 21:47:57.826028 DEBU:pod-manager.cpp:419 faas-share-fn/shufflenet-d1hrv process data and completed status 1, req_id 9
+2022-10-18 21:47:57.826107 DEBU:pod-manager.cpp:429 faas-share-fn/shufflenet-d1hrv processing response data done. completed status 1, req_id 9
+2022-10-18 21:47:57.826140 DEBU:pod-manager.cpp:434 faas-share-fn/shufflenet-d1hrv Success to process data, 9
+2022-10-18 21:47:57.826190 DEBU:pod-manager.cpp:442 faas-share-fn/shufflenet-d1hrv sleeping thread (special) 1, req_id 9
+2022-10-18 21:47:57.826234 DEBU:pod-manager.cpp:446 faas-share-fn/shufflenet-d1hrv quota_state assign 0, req_id 9
+2022-10-18 21:47:57.826261 DEBU:pod-manager.cpp:455 faas-share-fn/shufflenet-d1hrv pthread_cond_broadcast 0, req_id 9
+2022-10-18 21:47:57.826276 DEBU:pod-manager.cpp:461 faas-share-fn/shufflenet-d1hrv sleeping thread clear 0
+2022-10-18 21:47:57.826291 DEBU:pod-manager.cpp:469 faas-share-fn/shufflenet-d1hrv delete hook thread, remaing 0
+2022-10-18 21:47:57.826350 DEBU:pod-manager.cpp:519 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_QUOTA, 126
+2022-10-18 21:47:57.826501 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 126
+2022-10-18 21:47:58.579169 DEBU:scheduler.cpp:509 faas-share-fn/shufflenet-d1hrv didn't return on time
+2022-10-18 21:47:58.579229 DEBU:scheduler.cpp:524 no candidates
+2022-10-18 21:47:58.580468 DEBU:pod-manager.cpp:319 faas-share-fn/shufflenet-d1hrv kernel launch, # 1
+2022-10-18 21:47:58.580527 DEBU:pod-manager.cpp:374 faas-share-fn/shufflenet-d1hrv hook_kernel_launch: quota_state = 1, req_id -2140484600
+2022-10-18 21:47:58.580568 DEBU:pod-manager.cpp:390 faas-share-fn/shufflenet-d1hrv send signal & req_queue_cond 0, req_id 10
+2022-10-18 21:47:58.580588 DEBU:pod-manager.cpp:393 faas-share-fn/shufflenet-d1hrv unlock req_queue_mutex 0, req_id 10
+2022-10-18 21:47:58.580835 DEBU:scheduler.cpp:539 pod_client_func recv -> handle message
+2022-10-18 21:47:58.580876 DEBU:pod-manager.cpp:399 faas-share-fn/shufflenet-d1hrv check completed status 0, req_id 10
+2022-10-18 21:47:58.580919 DEBU:pod-manager.cpp:404 faas-share-fn/shufflenet-d1hrv scheduler_recv_sync 1, req_id 10
+2022-10-18 21:47:58.581116 DEBU:scheduler.cpp:386 sleep until 4002164.363
+2022-10-18 21:47:58.581136 DEBU:pod-manager.cpp:570 scheduler_thread_send_func recv > 0, 80
+2022-10-18 21:47:58.581167 DEBU:pod-manager.cpp:571 send a kernel launch request, req_id: 10
+2022-10-18 21:48:06.540224 DEBU:scheduler.cpp:386 sleep until 4002164.665
+2022-10-18 21:48:06.842455 DEBU:scheduler.cpp:474 select faas-share-fn/shufflenet-d1hrv, waiting time: 8261.489 ms
+2022-10-18 21:48:06.842644 DEBU:scheduler.cpp:171 faas-share-fn/shufflenet-d1hrv: burst: 1735.176ms, assign quota: 1244.195ms
+2022-10-18 21:48:06.842898 DEBU:pod-manager.cpp:599 scheduler_thread_recv_func recv > 0, req_id 10
+2022-10-18 21:48:06.842955 DEBU:pod-manager.cpp:600 req_id 10 complete.
+2022-10-18 21:48:06.842999 DEBU:pod-manager.cpp:613 scheduler_thread_recv_func signal 0, req_id 10
+2022-10-18 21:48:06.843435 DEBU:pod-manager.cpp:411 faas-share-fn/shufflenet-d1hrv scheduler_recv_sync 0, req_id 10
+2022-10-18 21:48:06.843489 DEBU:pod-manager.cpp:414 faas-share-fn/shufflenet-d1hrv wait stop and completed status 0, req_id 10
+2022-10-18 21:48:06.843511 DEBU:pod-manager.cpp:419 faas-share-fn/shufflenet-d1hrv process data and completed status 1, req_id 10
+2022-10-18 21:48:06.843536 DEBU:pod-manager.cpp:429 faas-share-fn/shufflenet-d1hrv processing response data done. completed status 1, req_id 10
+2022-10-18 21:48:06.843554 DEBU:pod-manager.cpp:434 faas-share-fn/shufflenet-d1hrv Success to process data, 10
+2022-10-18 21:48:06.843581 DEBU:pod-manager.cpp:442 faas-share-fn/shufflenet-d1hrv sleeping thread (special) 1, req_id 10
+2022-10-18 21:48:06.843596 DEBU:pod-manager.cpp:446 faas-share-fn/shufflenet-d1hrv quota_state assign 0, req_id 10
+2022-10-18 21:48:06.843611 DEBU:pod-manager.cpp:455 faas-share-fn/shufflenet-d1hrv pthread_cond_broadcast 0, req_id 10
+2022-10-18 21:48:06.843626 DEBU:pod-manager.cpp:461 faas-share-fn/shufflenet-d1hrv sleeping thread clear 0
+2022-10-18 21:48:06.843641 DEBU:pod-manager.cpp:469 faas-share-fn/shufflenet-d1hrv delete hook thread, remaing 0
+2022-10-18 21:48:06.843656 DEBU:pod-manager.cpp:519 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_QUOTA, 127
+2022-10-18 21:48:06.843850 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 127
+2022-10-18 21:48:08.087268 DEBU:scheduler.cpp:509 faas-share-fn/shufflenet-d1hrv didn't return on time
+2022-10-18 21:48:08.087467 DEBU:scheduler.cpp:524 no candidates
+2022-10-18 21:48:08.088828 DEBU:pod-manager.cpp:319 faas-share-fn/shufflenet-d1hrv kernel launch, # 1
+2022-10-18 21:48:08.088891 DEBU:pod-manager.cpp:374 faas-share-fn/shufflenet-d1hrv hook_kernel_launch: quota_state = 1, req_id -2140484600
+2022-10-18 21:48:08.088959 DEBU:pod-manager.cpp:390 faas-share-fn/shufflenet-d1hrv send signal & req_queue_cond 0, req_id 11
+2022-10-18 21:48:08.088989 DEBU:pod-manager.cpp:393 faas-share-fn/shufflenet-d1hrv unlock req_queue_mutex 0, req_id 11
+2022-10-18 21:48:08.089004 DEBU:pod-manager.cpp:399 faas-share-fn/shufflenet-d1hrv check completed status 0, req_id 11
+2022-10-18 21:48:08.089019 DEBU:pod-manager.cpp:404 faas-share-fn/shufflenet-d1hrv scheduler_recv_sync 1, req_id 11
+2022-10-18 21:48:08.089265 DEBU:scheduler.cpp:539 pod_client_func recv -> handle message
+2022-10-18 21:48:08.089310 DEBU:pod-manager.cpp:570 scheduler_thread_send_func recv > 0, 80
+2022-10-18 21:48:08.089342 DEBU:pod-manager.cpp:571 send a kernel launch request, req_id: 11
+2022-10-18 21:48:08.089486 DEBU:scheduler.cpp:474 select faas-share-fn/shufflenet-d1hrv, waiting time: 0.135 ms
+2022-10-18 21:48:08.089594 DEBU:scheduler.cpp:171 faas-share-fn/shufflenet-d1hrv: burst: 2489.250ms, assign quota: 1866.722ms
+2022-10-18 21:48:08.089813 DEBU:pod-manager.cpp:599 scheduler_thread_recv_func recv > 0, req_id 11
+2022-10-18 21:48:08.089857 DEBU:pod-manager.cpp:600 req_id 11 complete.
+2022-10-18 21:48:08.089896 DEBU:pod-manager.cpp:613 scheduler_thread_recv_func signal 0, req_id 11
+2022-10-18 21:48:08.089937 DEBU:pod-manager.cpp:411 faas-share-fn/shufflenet-d1hrv scheduler_recv_sync 0, req_id 11
+2022-10-18 21:48:08.089962 DEBU:pod-manager.cpp:414 faas-share-fn/shufflenet-d1hrv wait stop and completed status 0, req_id 11
+2022-10-18 21:48:08.089979 DEBU:pod-manager.cpp:419 faas-share-fn/shufflenet-d1hrv process data and completed status 1, req_id 11
+2022-10-18 21:48:08.090000 DEBU:pod-manager.cpp:429 faas-share-fn/shufflenet-d1hrv processing response data done. completed status 1, req_id 11
+2022-10-18 21:48:08.090018 DEBU:pod-manager.cpp:434 faas-share-fn/shufflenet-d1hrv Success to process data, 11
+2022-10-18 21:48:08.090033 DEBU:pod-manager.cpp:442 faas-share-fn/shufflenet-d1hrv sleeping thread (special) 1, req_id 11
+2022-10-18 21:48:08.090047 DEBU:pod-manager.cpp:446 faas-share-fn/shufflenet-d1hrv quota_state assign 0, req_id 11
+2022-10-18 21:48:08.090062 DEBU:pod-manager.cpp:455 faas-share-fn/shufflenet-d1hrv pthread_cond_broadcast 0, req_id 11
+2022-10-18 21:48:08.090076 DEBU:pod-manager.cpp:461 faas-share-fn/shufflenet-d1hrv sleeping thread clear 0
+2022-10-18 21:48:08.090125 DEBU:pod-manager.cpp:469 faas-share-fn/shufflenet-d1hrv delete hook thread, remaing 0
+2022-10-18 21:48:08.090143 DEBU:pod-manager.cpp:519 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_QUOTA, 128
+2022-10-18 21:48:08.090255 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 128
+2022-10-18 21:48:09.956663 DEBU:scheduler.cpp:509 faas-share-fn/shufflenet-d1hrv didn't return on time
+2022-10-18 21:48:09.956724 DEBU:scheduler.cpp:524 no candidates
+2022-10-18 21:48:09.957314 DEBU:pod-manager.cpp:319 faas-share-fn/shufflenet-d1hrv kernel launch, # 1
+2022-10-18 21:48:09.957373 DEBU:pod-manager.cpp:374 faas-share-fn/shufflenet-d1hrv hook_kernel_launch: quota_state = 1, req_id -2140484600
+2022-10-18 21:48:09.957415 DEBU:pod-manager.cpp:390 faas-share-fn/shufflenet-d1hrv send signal & req_queue_cond 0, req_id 12
+2022-10-18 21:48:09.957450 DEBU:pod-manager.cpp:393 faas-share-fn/shufflenet-d1hrv unlock req_queue_mutex 0, req_id 12
+2022-10-18 21:48:09.957468 DEBU:pod-manager.cpp:399 faas-share-fn/shufflenet-d1hrv check completed status 0, req_id 12
+2022-10-18 21:48:09.957490 DEBU:pod-manager.cpp:404 faas-share-fn/shufflenet-d1hrv scheduler_recv_sync 1, req_id 12
+2022-10-18 21:48:09.957552 DEBU:pod-manager.cpp:570 scheduler_thread_send_func recv > 0, 80
+2022-10-18 21:48:09.957585 DEBU:pod-manager.cpp:571 send a kernel launch request, req_id: 12
+2022-10-18 21:48:09.957613 DEBU:scheduler.cpp:539 pod_client_func recv -> handle message
+2022-10-18 21:48:09.957780 DEBU:scheduler.cpp:386 sleep until 4002175.910
+2022-10-18 21:48:18.087611 DEBU:scheduler.cpp:474 select faas-share-fn/shufflenet-d1hrv, waiting time: 8129.876 ms
+2022-10-18 21:48:18.087681 DEBU:scheduler.cpp:171 faas-share-fn/shufflenet-d1hrv: burst: 6226.418ms, assign quota: 2000.000ms
+2022-10-18 21:48:18.087892 DEBU:pod-manager.cpp:599 scheduler_thread_recv_func recv > 0, req_id 12
+2022-10-18 21:48:18.087951 DEBU:pod-manager.cpp:600 req_id 12 complete.
+2022-10-18 21:48:18.087996 DEBU:pod-manager.cpp:613 scheduler_thread_recv_func signal 0, req_id 12
+2022-10-18 21:48:18.088083 DEBU:pod-manager.cpp:411 faas-share-fn/shufflenet-d1hrv scheduler_recv_sync 0, req_id 12
+2022-10-18 21:48:18.088163 DEBU:pod-manager.cpp:414 faas-share-fn/shufflenet-d1hrv wait stop and completed status 0, req_id 12
+2022-10-18 21:48:18.088186 DEBU:pod-manager.cpp:419 faas-share-fn/shufflenet-d1hrv process data and completed status 1, req_id 12
+2022-10-18 21:48:18.088210 DEBU:pod-manager.cpp:429 faas-share-fn/shufflenet-d1hrv processing response data done. completed status 1, req_id 12
+2022-10-18 21:48:18.088229 DEBU:pod-manager.cpp:434 faas-share-fn/shufflenet-d1hrv Success to process data, 12
+2022-10-18 21:48:18.088250 DEBU:pod-manager.cpp:442 faas-share-fn/shufflenet-d1hrv sleeping thread (special) 1, req_id 12
+2022-10-18 21:48:18.088265 DEBU:pod-manager.cpp:446 faas-share-fn/shufflenet-d1hrv quota_state assign 0, req_id 12
+2022-10-18 21:48:18.088281 DEBU:pod-manager.cpp:455 faas-share-fn/shufflenet-d1hrv pthread_cond_broadcast 0, req_id 12
+2022-10-18 21:48:18.088299 DEBU:pod-manager.cpp:461 faas-share-fn/shufflenet-d1hrv sleeping thread clear 0
+2022-10-18 21:48:18.088314 DEBU:pod-manager.cpp:469 faas-share-fn/shufflenet-d1hrv delete hook thread, remaing 0
+2022-10-18 21:48:18.088329 DEBU:pod-manager.cpp:519 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_QUOTA, 129
+2022-10-18 21:48:18.088476 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 129
+2022-10-18 21:48:20.088081 DEBU:scheduler.cpp:509 faas-share-fn/shufflenet-d1hrv didn't return on time
+2022-10-18 21:48:20.088158 DEBU:scheduler.cpp:524 no candidates
+2022-10-18 21:48:20.089192 DEBU:pod-manager.cpp:319 faas-share-fn/shufflenet-d1hrv kernel launch, # 1
+2022-10-18 21:48:20.089242 DEBU:pod-manager.cpp:374 faas-share-fn/shufflenet-d1hrv hook_kernel_launch: quota_state = 1, req_id -2140484600
+2022-10-18 21:48:20.089281 DEBU:pod-manager.cpp:390 faas-share-fn/shufflenet-d1hrv send signal & req_queue_cond 0, req_id 13
+2022-10-18 21:48:20.089313 DEBU:pod-manager.cpp:393 faas-share-fn/shufflenet-d1hrv unlock req_queue_mutex 0, req_id 13
+2022-10-18 21:48:20.089329 DEBU:pod-manager.cpp:399 faas-share-fn/shufflenet-d1hrv check completed status 0, req_id 13
+2022-10-18 21:48:20.089345 DEBU:pod-manager.cpp:404 faas-share-fn/shufflenet-d1hrv scheduler_recv_sync 1, req_id 13
+2022-10-18 21:48:20.089498 DEBU:pod-manager.cpp:570 scheduler_thread_send_func recv > 0, 80
+2022-10-18 21:48:20.089550 DEBU:pod-manager.cpp:571 send a kernel launch request, req_id: 13
+2022-10-18 21:48:20.089554 DEBU:scheduler.cpp:539 pod_client_func recv -> handle message
+2022-10-18 21:48:20.089909 DEBU:scheduler.cpp:386 sleep until 4002187.911
+2022-10-18 21:48:30.088146 DEBU:scheduler.cpp:474 select faas-share-fn/shufflenet-d1hrv, waiting time: 9998.348 ms
+2022-10-18 21:48:30.088222 DEBU:scheduler.cpp:171 faas-share-fn/shufflenet-d1hrv: burst: 4000.458ms, assign quota: 2000.000ms
+2022-10-18 21:48:30.088439 DEBU:pod-manager.cpp:599 scheduler_thread_recv_func recv > 0, req_id 13
+2022-10-18 21:48:30.088489 DEBU:pod-manager.cpp:600 req_id 13 complete.
+2022-10-18 21:48:30.088536 DEBU:pod-manager.cpp:613 scheduler_thread_recv_func signal 0, req_id 13
+2022-10-18 21:48:30.088662 DEBU:pod-manager.cpp:411 faas-share-fn/shufflenet-d1hrv scheduler_recv_sync 0, req_id 13
+2022-10-18 21:48:30.088710 DEBU:pod-manager.cpp:414 faas-share-fn/shufflenet-d1hrv wait stop and completed status 0, req_id 13
+2022-10-18 21:48:30.088733 DEBU:pod-manager.cpp:419 faas-share-fn/shufflenet-d1hrv process data and completed status 1, req_id 13
+2022-10-18 21:48:30.088757 DEBU:pod-manager.cpp:429 faas-share-fn/shufflenet-d1hrv processing response data done. completed status 1, req_id 13
+2022-10-18 21:48:30.088774 DEBU:pod-manager.cpp:434 faas-share-fn/shufflenet-d1hrv Success to process data, 13
+2022-10-18 21:48:30.088789 DEBU:pod-manager.cpp:442 faas-share-fn/shufflenet-d1hrv sleeping thread (special) 1, req_id 13
+2022-10-18 21:48:30.088804 DEBU:pod-manager.cpp:446 faas-share-fn/shufflenet-d1hrv quota_state assign 0, req_id 13
+2022-10-18 21:48:30.088820 DEBU:pod-manager.cpp:455 faas-share-fn/shufflenet-d1hrv pthread_cond_broadcast 0, req_id 13
+2022-10-18 21:48:30.088835 DEBU:pod-manager.cpp:461 faas-share-fn/shufflenet-d1hrv sleeping thread clear 0
+2022-10-18 21:48:30.088849 DEBU:pod-manager.cpp:469 faas-share-fn/shufflenet-d1hrv delete hook thread, remaing 0
+2022-10-18 21:48:30.088871 DEBU:pod-manager.cpp:519 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_QUOTA, 130
+2022-10-18 21:48:30.089000 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 130
+2022-10-18 21:48:32.088511 DEBU:scheduler.cpp:509 faas-share-fn/shufflenet-d1hrv didn't return on time
+2022-10-18 21:48:32.088567 DEBU:scheduler.cpp:524 no candidates
+2022-10-18 21:48:32.089594 DEBU:pod-manager.cpp:319 faas-share-fn/shufflenet-d1hrv kernel launch, # 1
+2022-10-18 21:48:32.089646 DEBU:pod-manager.cpp:374 faas-share-fn/shufflenet-d1hrv hook_kernel_launch: quota_state = 1, req_id -2140484600
+2022-10-18 21:48:32.089684 DEBU:pod-manager.cpp:390 faas-share-fn/shufflenet-d1hrv send signal & req_queue_cond 0, req_id 14
+2022-10-18 21:48:32.089723 DEBU:pod-manager.cpp:393 faas-share-fn/shufflenet-d1hrv unlock req_queue_mutex 0, req_id 14
+2022-10-18 21:48:32.089745 DEBU:pod-manager.cpp:399 faas-share-fn/shufflenet-d1hrv check completed status 0, req_id 14
+2022-10-18 21:48:32.089760 DEBU:pod-manager.cpp:404 faas-share-fn/shufflenet-d1hrv scheduler_recv_sync 1, req_id 14
+2022-10-18 21:48:32.089850 DEBU:pod-manager.cpp:570 scheduler_thread_send_func recv > 0, 80
+2022-10-18 21:48:32.089887 DEBU:pod-manager.cpp:571 send a kernel launch request, req_id: 14
+2022-10-18 21:48:32.089893 DEBU:scheduler.cpp:539 pod_client_func recv -> handle message
+2022-10-18 21:48:32.090029 DEBU:scheduler.cpp:386 sleep until 4002199.911
+2022-10-18 21:48:42.088587 DEBU:scheduler.cpp:474 select faas-share-fn/shufflenet-d1hrv, waiting time: 9998.567 ms
+2022-10-18 21:48:42.088690 DEBU:scheduler.cpp:171 faas-share-fn/shufflenet-d1hrv: burst: 4000.290ms, assign quota: 2000.000ms
+2022-10-18 21:48:42.088925 DEBU:pod-manager.cpp:599 scheduler_thread_recv_func recv > 0, req_id 14
+2022-10-18 21:48:42.088979 DEBU:pod-manager.cpp:600 req_id 14 complete.
+2022-10-18 21:48:42.089028 DEBU:pod-manager.cpp:613 scheduler_thread_recv_func signal 0, req_id 14
+2022-10-18 21:48:42.089152 DEBU:pod-manager.cpp:411 faas-share-fn/shufflenet-d1hrv scheduler_recv_sync 0, req_id 14
+2022-10-18 21:48:42.089202 DEBU:pod-manager.cpp:414 faas-share-fn/shufflenet-d1hrv wait stop and completed status 0, req_id 14
+2022-10-18 21:48:42.089224 DEBU:pod-manager.cpp:419 faas-share-fn/shufflenet-d1hrv process data and completed status 1, req_id 14
+2022-10-18 21:48:42.089249 DEBU:pod-manager.cpp:429 faas-share-fn/shufflenet-d1hrv processing response data done. completed status 1, req_id 14
+2022-10-18 21:48:42.089274 DEBU:pod-manager.cpp:434 faas-share-fn/shufflenet-d1hrv Success to process data, 14
+2022-10-18 21:48:42.089290 DEBU:pod-manager.cpp:442 faas-share-fn/shufflenet-d1hrv sleeping thread (special) 1, req_id 14
+2022-10-18 21:48:42.089315 DEBU:pod-manager.cpp:446 faas-share-fn/shufflenet-d1hrv quota_state assign 0, req_id 14
+2022-10-18 21:48:42.089330 DEBU:pod-manager.cpp:455 faas-share-fn/shufflenet-d1hrv pthread_cond_broadcast 0, req_id 14
+2022-10-18 21:48:42.089345 DEBU:pod-manager.cpp:461 faas-share-fn/shufflenet-d1hrv sleeping thread clear 0
+2022-10-18 21:48:42.089360 DEBU:pod-manager.cpp:469 faas-share-fn/shufflenet-d1hrv delete hook thread, remaing 0
+2022-10-18 21:48:42.089375 DEBU:pod-manager.cpp:519 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_QUOTA, 131
+2022-10-18 21:48:42.089617 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 131
+2022-10-18 21:48:44.088967 DEBU:scheduler.cpp:509 faas-share-fn/shufflenet-d1hrv didn't return on time
+2022-10-18 21:48:44.089029 DEBU:scheduler.cpp:524 no candidates
+2022-10-18 21:48:44.090012 DEBU:pod-manager.cpp:319 faas-share-fn/shufflenet-d1hrv kernel launch, # 1
+2022-10-18 21:48:44.090075 DEBU:pod-manager.cpp:374 faas-share-fn/shufflenet-d1hrv hook_kernel_launch: quota_state = 1, req_id -2140484600
+2022-10-18 21:48:44.090152 DEBU:pod-manager.cpp:390 faas-share-fn/shufflenet-d1hrv send signal & req_queue_cond 0, req_id 15
+2022-10-18 21:48:44.090171 DEBU:pod-manager.cpp:393 faas-share-fn/shufflenet-d1hrv unlock req_queue_mutex 0, req_id 15
+2022-10-18 21:48:44.090186 DEBU:pod-manager.cpp:399 faas-share-fn/shufflenet-d1hrv check completed status 0, req_id 15
+2022-10-18 21:48:44.090201 DEBU:pod-manager.cpp:404 faas-share-fn/shufflenet-d1hrv scheduler_recv_sync 1, req_id 15
+2022-10-18 21:48:44.090304 DEBU:pod-manager.cpp:570 scheduler_thread_send_func recv > 0, 80
+2022-10-18 21:48:44.090353 DEBU:pod-manager.cpp:571 send a kernel launch request, req_id: 15
+2022-10-18 21:48:44.090424 DEBU:scheduler.cpp:539 pod_client_func recv -> handle message
+2022-10-18 21:48:44.090599 DEBU:scheduler.cpp:386 sleep until 4002211.911
+2022-10-18 21:48:54.089135 DEBU:scheduler.cpp:474 select faas-share-fn/shufflenet-d1hrv, waiting time: 9998.569 ms
+2022-10-18 21:48:54.089216 DEBU:scheduler.cpp:171 faas-share-fn/shufflenet-d1hrv: burst: 4000.302ms, assign quota: 2000.000ms
+2022-10-18 21:48:54.089436 DEBU:pod-manager.cpp:599 scheduler_thread_recv_func recv > 0, req_id 15
+2022-10-18 21:48:54.089485 DEBU:pod-manager.cpp:600 req_id 15 complete.
+2022-10-18 21:48:54.089527 DEBU:pod-manager.cpp:613 scheduler_thread_recv_func signal 0, req_id 15
+2022-10-18 21:48:54.089625 DEBU:pod-manager.cpp:411 faas-share-fn/shufflenet-d1hrv scheduler_recv_sync 0, req_id 15
+2022-10-18 21:48:54.089679 DEBU:pod-manager.cpp:414 faas-share-fn/shufflenet-d1hrv wait stop and completed status 0, req_id 15
+2022-10-18 21:48:54.089704 DEBU:pod-manager.cpp:419 faas-share-fn/shufflenet-d1hrv process data and completed status 1, req_id 15
+2022-10-18 21:48:54.089731 DEBU:pod-manager.cpp:429 faas-share-fn/shufflenet-d1hrv processing response data done. completed status 1, req_id 15
+2022-10-18 21:48:54.089754 DEBU:pod-manager.cpp:434 faas-share-fn/shufflenet-d1hrv Success to process data, 15
+2022-10-18 21:48:54.089772 DEBU:pod-manager.cpp:442 faas-share-fn/shufflenet-d1hrv sleeping thread (special) 1, req_id 15
+2022-10-18 21:48:54.089793 DEBU:pod-manager.cpp:446 faas-share-fn/shufflenet-d1hrv quota_state assign 0, req_id 15
+2022-10-18 21:48:54.089811 DEBU:pod-manager.cpp:455 faas-share-fn/shufflenet-d1hrv pthread_cond_broadcast 0, req_id 15
+2022-10-18 21:48:54.089829 DEBU:pod-manager.cpp:461 faas-share-fn/shufflenet-d1hrv sleeping thread clear 0
+2022-10-18 21:48:54.089860 DEBU:pod-manager.cpp:469 faas-share-fn/shufflenet-d1hrv delete hook thread, remaing 0
+2022-10-18 21:48:54.089878 DEBU:pod-manager.cpp:519 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_QUOTA, 132
+2022-10-18 21:48:54.089996 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 132
+2022-10-18 21:48:56.089554 DEBU:scheduler.cpp:509 faas-share-fn/shufflenet-d1hrv didn't return on time
+2022-10-18 21:48:56.089619 DEBU:scheduler.cpp:524 no candidates
+2022-10-18 21:48:56.090764 DEBU:pod-manager.cpp:319 faas-share-fn/shufflenet-d1hrv kernel launch, # 1
+2022-10-18 21:48:56.090819 DEBU:pod-manager.cpp:374 faas-share-fn/shufflenet-d1hrv hook_kernel_launch: quota_state = 1, req_id -2140484600
+2022-10-18 21:48:56.090859 DEBU:pod-manager.cpp:390 faas-share-fn/shufflenet-d1hrv send signal & req_queue_cond 0, req_id 16
+2022-10-18 21:48:56.090876 DEBU:pod-manager.cpp:393 faas-share-fn/shufflenet-d1hrv unlock req_queue_mutex 0, req_id 16
+2022-10-18 21:48:56.090891 DEBU:pod-manager.cpp:399 faas-share-fn/shufflenet-d1hrv check completed status 0, req_id 16
+2022-10-18 21:48:56.090915 DEBU:pod-manager.cpp:404 faas-share-fn/shufflenet-d1hrv scheduler_recv_sync 1, req_id 16
+2022-10-18 21:48:56.091007 DEBU:pod-manager.cpp:570 scheduler_thread_send_func recv > 0, 80
+2022-10-18 21:48:56.091041 DEBU:pod-manager.cpp:571 send a kernel launch request, req_id: 16
+2022-10-18 21:48:56.091129 DEBU:scheduler.cpp:539 pod_client_func recv -> handle message
+2022-10-18 21:48:56.091290 DEBU:scheduler.cpp:386 sleep until 4002223.912
+2022-10-18 21:49:06.089769 DEBU:scheduler.cpp:474 select faas-share-fn/shufflenet-d1hrv, waiting time: 9998.520 ms
+2022-10-18 21:49:06.089844 DEBU:scheduler.cpp:171 faas-share-fn/shufflenet-d1hrv: burst: 4000.492ms, assign quota: 2000.000ms
+2022-10-18 21:49:06.090063 DEBU:pod-manager.cpp:599 scheduler_thread_recv_func recv > 0, req_id 16
+2022-10-18 21:49:06.090130 DEBU:pod-manager.cpp:600 req_id 16 complete.
+2022-10-18 21:49:06.090172 DEBU:pod-manager.cpp:613 scheduler_thread_recv_func signal 0, req_id 16
+2022-10-18 21:49:06.090275 DEBU:pod-manager.cpp:411 faas-share-fn/shufflenet-d1hrv scheduler_recv_sync 0, req_id 16
+2022-10-18 21:49:06.090326 DEBU:pod-manager.cpp:414 faas-share-fn/shufflenet-d1hrv wait stop and completed status 0, req_id 16
+2022-10-18 21:49:06.090348 DEBU:pod-manager.cpp:419 faas-share-fn/shufflenet-d1hrv process data and completed status 1, req_id 16
+2022-10-18 21:49:06.090372 DEBU:pod-manager.cpp:429 faas-share-fn/shufflenet-d1hrv processing response data done. completed status 1, req_id 16
+2022-10-18 21:49:06.090401 DEBU:pod-manager.cpp:434 faas-share-fn/shufflenet-d1hrv Success to process data, 16
+2022-10-18 21:49:06.090417 DEBU:pod-manager.cpp:442 faas-share-fn/shufflenet-d1hrv sleeping thread (special) 1, req_id 16
+2022-10-18 21:49:06.090432 DEBU:pod-manager.cpp:446 faas-share-fn/shufflenet-d1hrv quota_state assign 0, req_id 16
+2022-10-18 21:49:06.090447 DEBU:pod-manager.cpp:455 faas-share-fn/shufflenet-d1hrv pthread_cond_broadcast 0, req_id 16
+2022-10-18 21:49:06.090462 DEBU:pod-manager.cpp:461 faas-share-fn/shufflenet-d1hrv sleeping thread clear 0
+2022-10-18 21:49:06.090476 DEBU:pod-manager.cpp:469 faas-share-fn/shufflenet-d1hrv delete hook thread, remaing 0
+2022-10-18 21:49:06.090492 DEBU:pod-manager.cpp:519 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_QUOTA, 133
+2022-10-18 21:49:06.090621 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 133
+2022-10-18 21:49:08.090060 DEBU:scheduler.cpp:509 faas-share-fn/shufflenet-d1hrv didn't return on time
+2022-10-18 21:49:08.090102 DEBU:scheduler.cpp:524 no candidates
+2022-10-18 21:49:08.091394 DEBU:pod-manager.cpp:319 faas-share-fn/shufflenet-d1hrv kernel launch, # 1
+2022-10-18 21:49:08.091450 DEBU:pod-manager.cpp:374 faas-share-fn/shufflenet-d1hrv hook_kernel_launch: quota_state = 1, req_id -2140484600
+2022-10-18 21:49:08.091498 DEBU:pod-manager.cpp:390 faas-share-fn/shufflenet-d1hrv send signal & req_queue_cond 0, req_id 17
+2022-10-18 21:49:08.091514 DEBU:pod-manager.cpp:393 faas-share-fn/shufflenet-d1hrv unlock req_queue_mutex 0, req_id 17
+2022-10-18 21:49:08.091529 DEBU:pod-manager.cpp:399 faas-share-fn/shufflenet-d1hrv check completed status 0, req_id 17
+2022-10-18 21:49:08.091544 DEBU:pod-manager.cpp:404 faas-share-fn/shufflenet-d1hrv scheduler_recv_sync 1, req_id 17
+2022-10-18 21:49:08.091630 DEBU:pod-manager.cpp:570 scheduler_thread_send_func recv > 0, 80
+2022-10-18 21:49:08.091663 DEBU:pod-manager.cpp:571 send a kernel launch request, req_id: 17
+2022-10-18 21:49:08.091733 DEBU:scheduler.cpp:539 pod_client_func recv -> handle message
+2022-10-18 21:49:08.091855 DEBU:scheduler.cpp:386 sleep until 4002235.913
+2022-10-18 21:49:18.090333 DEBU:scheduler.cpp:474 select faas-share-fn/shufflenet-d1hrv, waiting time: 9998.482 ms
+2022-10-18 21:49:18.090517 DEBU:scheduler.cpp:171 faas-share-fn/shufflenet-d1hrv: burst: 4000.478ms, assign quota: 2000.000ms
+2022-10-18 21:49:18.090899 DEBU:pod-manager.cpp:599 scheduler_thread_recv_func recv > 0, req_id 17
+2022-10-18 21:49:18.090957 DEBU:pod-manager.cpp:600 req_id 17 complete.
+2022-10-18 21:49:18.091002 DEBU:pod-manager.cpp:613 scheduler_thread_recv_func signal 0, req_id 17
+2022-10-18 21:49:18.091132 DEBU:pod-manager.cpp:411 faas-share-fn/shufflenet-d1hrv scheduler_recv_sync 0, req_id 17
+2022-10-18 21:49:18.091241 DEBU:pod-manager.cpp:414 faas-share-fn/shufflenet-d1hrv wait stop and completed status 0, req_id 17
+2022-10-18 21:49:18.091279 DEBU:pod-manager.cpp:419 faas-share-fn/shufflenet-d1hrv process data and completed status 1, req_id 17
+2022-10-18 21:49:18.091305 DEBU:pod-manager.cpp:429 faas-share-fn/shufflenet-d1hrv processing response data done. completed status 1, req_id 17
+2022-10-18 21:49:18.091323 DEBU:pod-manager.cpp:434 faas-share-fn/shufflenet-d1hrv Success to process data, 17
+2022-10-18 21:49:18.091345 DEBU:pod-manager.cpp:442 faas-share-fn/shufflenet-d1hrv sleeping thread (special) 1, req_id 17
+2022-10-18 21:49:18.091360 DEBU:pod-manager.cpp:446 faas-share-fn/shufflenet-d1hrv quota_state assign 0, req_id 17
+2022-10-18 21:49:18.091375 DEBU:pod-manager.cpp:455 faas-share-fn/shufflenet-d1hrv pthread_cond_broadcast 0, req_id 17
+2022-10-18 21:49:18.091389 DEBU:pod-manager.cpp:461 faas-share-fn/shufflenet-d1hrv sleeping thread clear 0
+2022-10-18 21:49:18.091403 DEBU:pod-manager.cpp:469 faas-share-fn/shufflenet-d1hrv delete hook thread, remaing 0
+2022-10-18 21:49:18.091417 DEBU:pod-manager.cpp:519 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_QUOTA, 134
+2022-10-18 21:49:18.091542 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 134
+2022-10-18 21:49:20.090939 DEBU:scheduler.cpp:509 faas-share-fn/shufflenet-d1hrv didn't return on time
+2022-10-18 21:49:20.091000 DEBU:scheduler.cpp:524 no candidates
+2022-10-18 21:49:20.092172 DEBU:pod-manager.cpp:319 faas-share-fn/shufflenet-d1hrv kernel launch, # 1
+2022-10-18 21:49:20.092241 DEBU:pod-manager.cpp:374 faas-share-fn/shufflenet-d1hrv hook_kernel_launch: quota_state = 1, req_id -2140484600
+2022-10-18 21:49:20.092281 DEBU:pod-manager.cpp:390 faas-share-fn/shufflenet-d1hrv send signal & req_queue_cond 0, req_id 18
+2022-10-18 21:49:20.092298 DEBU:pod-manager.cpp:393 faas-share-fn/shufflenet-d1hrv unlock req_queue_mutex 0, req_id 18
+2022-10-18 21:49:20.092313 DEBU:pod-manager.cpp:399 faas-share-fn/shufflenet-d1hrv check completed status 0, req_id 18
+2022-10-18 21:49:20.092328 DEBU:pod-manager.cpp:404 faas-share-fn/shufflenet-d1hrv scheduler_recv_sync 1, req_id 18
+2022-10-18 21:49:20.092368 DEBU:pod-manager.cpp:570 scheduler_thread_send_func recv > 0, 80
+2022-10-18 21:49:20.092385 DEBU:pod-manager.cpp:571 send a kernel launch request, req_id: 18
+2022-10-18 21:49:20.092416 DEBU:scheduler.cpp:539 pod_client_func recv -> handle message
+2022-10-18 21:49:20.092552 DEBU:scheduler.cpp:386 sleep until 4002247.913
+2022-10-18 21:49:30.090931 DEBU:scheduler.cpp:474 select faas-share-fn/shufflenet-d1hrv, waiting time: 9998.405 ms
+2022-10-18 21:49:30.091013 DEBU:scheduler.cpp:171 faas-share-fn/shufflenet-d1hrv: burst: 4000.206ms, assign quota: 2000.000ms
+2022-10-18 21:49:30.091304 DEBU:pod-manager.cpp:599 scheduler_thread_recv_func recv > 0, req_id 18
+2022-10-18 21:49:30.091351 DEBU:pod-manager.cpp:600 req_id 18 complete.
+2022-10-18 21:49:30.091402 DEBU:pod-manager.cpp:613 scheduler_thread_recv_func signal 0, req_id 18
+2022-10-18 21:49:30.091511 DEBU:pod-manager.cpp:411 faas-share-fn/shufflenet-d1hrv scheduler_recv_sync 0, req_id 18
+2022-10-18 21:49:30.091552 DEBU:pod-manager.cpp:414 faas-share-fn/shufflenet-d1hrv wait stop and completed status 0, req_id 18
+2022-10-18 21:49:30.091575 DEBU:pod-manager.cpp:419 faas-share-fn/shufflenet-d1hrv process data and completed status 1, req_id 18
+2022-10-18 21:49:30.091600 DEBU:pod-manager.cpp:429 faas-share-fn/shufflenet-d1hrv processing response data done. completed status 1, req_id 18
+2022-10-18 21:49:30.091632 DEBU:pod-manager.cpp:434 faas-share-fn/shufflenet-d1hrv Success to process data, 18
+2022-10-18 21:49:30.091648 DEBU:pod-manager.cpp:442 faas-share-fn/shufflenet-d1hrv sleeping thread (special) 1, req_id 18
+2022-10-18 21:49:30.091663 DEBU:pod-manager.cpp:446 faas-share-fn/shufflenet-d1hrv quota_state assign 0, req_id 18
+2022-10-18 21:49:30.091678 DEBU:pod-manager.cpp:455 faas-share-fn/shufflenet-d1hrv pthread_cond_broadcast 0, req_id 18
+2022-10-18 21:49:30.091692 DEBU:pod-manager.cpp:461 faas-share-fn/shufflenet-d1hrv sleeping thread clear 0
+2022-10-18 21:49:30.091708 DEBU:pod-manager.cpp:469 faas-share-fn/shufflenet-d1hrv delete hook thread, remaing 0
+2022-10-18 21:49:30.091722 DEBU:pod-manager.cpp:519 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_QUOTA, 135
+2022-10-18 21:49:30.091848 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 135
+2022-10-18 21:49:32.091338 DEBU:scheduler.cpp:509 faas-share-fn/shufflenet-d1hrv didn't return on time
+2022-10-18 21:49:32.091401 DEBU:scheduler.cpp:524 no candidates
+2022-10-18 21:49:32.092542 DEBU:pod-manager.cpp:319 faas-share-fn/shufflenet-d1hrv kernel launch, # 1
+2022-10-18 21:49:32.092630 DEBU:pod-manager.cpp:374 faas-share-fn/shufflenet-d1hrv hook_kernel_launch: quota_state = 1, req_id -2140484600
+2022-10-18 21:49:32.092667 DEBU:pod-manager.cpp:390 faas-share-fn/shufflenet-d1hrv send signal & req_queue_cond 0, req_id 19
+2022-10-18 21:49:32.092708 DEBU:pod-manager.cpp:393 faas-share-fn/shufflenet-d1hrv unlock req_queue_mutex 0, req_id 19
+2022-10-18 21:49:32.092725 DEBU:pod-manager.cpp:399 faas-share-fn/shufflenet-d1hrv check completed status 0, req_id 19
+2022-10-18 21:49:32.092743 DEBU:pod-manager.cpp:404 faas-share-fn/shufflenet-d1hrv scheduler_recv_sync 1, req_id 19
+2022-10-18 21:49:32.092830 DEBU:pod-manager.cpp:570 scheduler_thread_send_func recv > 0, 80
+2022-10-18 21:49:32.092879 DEBU:pod-manager.cpp:571 send a kernel launch request, req_id: 19
+2022-10-18 21:49:32.092949 DEBU:scheduler.cpp:539 pod_client_func recv -> handle message
+2022-10-18 21:49:32.093177 DEBU:scheduler.cpp:386 sleep until 4002259.914
+2022-10-18 21:49:42.091549 DEBU:scheduler.cpp:474 select faas-share-fn/shufflenet-d1hrv, waiting time: 9998.481 ms
+2022-10-18 21:49:42.091628 DEBU:scheduler.cpp:171 faas-share-fn/shufflenet-d1hrv: burst: 4000.514ms, assign quota: 2000.000ms
+2022-10-18 21:49:42.091908 DEBU:pod-manager.cpp:599 scheduler_thread_recv_func recv > 0, req_id 19
+2022-10-18 21:49:42.091967 DEBU:pod-manager.cpp:600 req_id 19 complete.
+2022-10-18 21:49:42.092014 DEBU:pod-manager.cpp:613 scheduler_thread_recv_func signal 0, req_id 19
+2022-10-18 21:49:42.092164 DEBU:pod-manager.cpp:411 faas-share-fn/shufflenet-d1hrv scheduler_recv_sync 0, req_id 19
+2022-10-18 21:49:42.092249 DEBU:pod-manager.cpp:414 faas-share-fn/shufflenet-d1hrv wait stop and completed status 0, req_id 19
+2022-10-18 21:49:42.092273 DEBU:pod-manager.cpp:419 faas-share-fn/shufflenet-d1hrv process data and completed status 1, req_id 19
+2022-10-18 21:49:42.092298 DEBU:pod-manager.cpp:429 faas-share-fn/shufflenet-d1hrv processing response data done. completed status 1, req_id 19
+2022-10-18 21:49:42.092317 DEBU:pod-manager.cpp:434 faas-share-fn/shufflenet-d1hrv Success to process data, 19
+2022-10-18 21:49:42.092346 DEBU:pod-manager.cpp:442 faas-share-fn/shufflenet-d1hrv sleeping thread (special) 1, req_id 19
+2022-10-18 21:49:42.092387 DEBU:pod-manager.cpp:446 faas-share-fn/shufflenet-d1hrv quota_state assign 0, req_id 19
+2022-10-18 21:49:42.092414 DEBU:pod-manager.cpp:455 faas-share-fn/shufflenet-d1hrv pthread_cond_broadcast 0, req_id 19
+2022-10-18 21:49:42.092429 DEBU:pod-manager.cpp:461 faas-share-fn/shufflenet-d1hrv sleeping thread clear 0
+2022-10-18 21:49:42.092445 DEBU:pod-manager.cpp:469 faas-share-fn/shufflenet-d1hrv delete hook thread, remaing 0
+2022-10-18 21:49:42.092460 DEBU:pod-manager.cpp:519 faas-share-fn/shufflenet-d1hrv hook_thread_func recv - REQ_QUOTA, 136
+2022-10-18 21:49:42.092645 DEBU:pod-manager.cpp:529 faas-share-fn/shufflenet-d1hrv hook_thread_func send, 136
+2022-10-18 21:49:44.091915 DEBU:scheduler.cpp:509 faas-share-fn/shufflenet-d1hrv didn't return on time
+2022-10-18 21:49:44.091985 DEBU:scheduler.cpp:524 no candidates

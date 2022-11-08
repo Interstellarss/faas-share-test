@@ -1,0 +1,9 @@
+#for database output
+k6 run --out influxdb=http://localhost:8086/myk6db k6.js
+
+#for cloud output
+k6 run --out cloud k6.js
+
+
+#for csv output
+k6 run --out csv='path&name_of_csv_file' 'k6_script'
