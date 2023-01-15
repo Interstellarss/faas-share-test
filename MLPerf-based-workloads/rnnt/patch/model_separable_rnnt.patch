@@ -1,0 +1,43 @@
+diff --git a/speech_recognition/rnnt/pytorch/model_separable_rnnt.py b/speech_recognition/rnnt/pytorch/model_separable_rnnt.py
+index 68a0ed6..cf03fb2 100644
+--- a/speech_recognition/rnnt/pytorch/model_separable_rnnt.py
++++ b/speech_recognition/rnnt/pytorch/model_separable_rnnt.py
+@@ -6,9 +6,8 @@ import torch
+ from rnn import rnn
+ from rnn import StackTime
+ 
+-
+ class RNNT(torch.nn.Module):
+-    def __init__(self, rnnt=None, num_classes=1, **kwargs):
++    def __init__(self, rnnt=None, device="CPU", num_classes=1, **kwargs):
+         super().__init__()
+         if kwargs.get("no_featurizer", False):
+             in_features = kwargs.get("in_features")
+@@ -38,6 +37,7 @@ class RNNT(torch.nn.Module):
+             None if "norm" not in rnnt else rnnt["norm"],
+             rnnt["rnn_type"],
+             rnnt["dropout"],
++            device,
+         )
+ 
+         self.joint = Joint(
+@@ -90,8 +90,9 @@ class Encoder(torch.nn.Module):
+ 
+ class Prediction(torch.nn.Module):
+     def __init__(self, vocab_size, n_hidden, pred_rnn_layers,
+-                 forget_gate_bias, norm, rnn_type, dropout):
++                 forget_gate_bias, norm, rnn_type, dropout, device):
+         super().__init__()
++        self.device = device
+         self.embed = torch.nn.Embedding(vocab_size - 1, n_hidden)
+         self.n_hidden = n_hidden
+         self.dec_rnn = rnn(
+@@ -129,7 +130,7 @@ class Prediction(torch.nn.Module):
+             assert state is None
+             # Hacky, no way to determine this right now!
+             B = 1
+-            y = torch.zeros((B, 1, self.n_hidden), dtype=torch.float32)
++            y = torch.zeros((B, 1, self.n_hidden), dtype=torch.float32).to(self.device)
+         else:
+             y = self.embed(y)
+ 

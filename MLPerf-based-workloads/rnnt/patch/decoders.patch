@@ -1,0 +1,52 @@
+diff --git a/speech_recognition/rnnt/pytorch/decoders.py b/speech_recognition/rnnt/pytorch/decoders.py
+index 7f6d405..4bbd30e 100644
+--- a/speech_recognition/rnnt/pytorch/decoders.py
++++ b/speech_recognition/rnnt/pytorch/decoders.py
+@@ -20,7 +20,6 @@ import torch
+ import torch.nn.functional as F
+ from model_separable_rnnt import label_collate
+ 
+-
+ class ScriptGreedyDecoder(torch.nn.Module):
+     """A greedy transducer decoder.
+ 
+@@ -34,18 +33,19 @@ class ScriptGreedyDecoder(torch.nn.Module):
+             probability is less than this.
+     """
+ 
+-    def __init__(self, blank_index, model, max_symbols_per_step=30):
++    def __init__(self, blank_index, model, device, max_symbols_per_step=30):
+         super().__init__()
+-        assert isinstance(model, torch.jit.ScriptModule)
++        # assert isinstance(model, torch.jit.ScriptModule)
+         # assert not model.training
+         self.eval()
+         self._model = model
+         self._blank_id = blank_index
+         self._SOS = -1
++        self.device = device
+         assert max_symbols_per_step > 0
+         self._max_symbols_per_step = max_symbols_per_step
+ 
+-    @torch.jit.export
++    #@torch.jit.export
+     def forward(self, x: torch.Tensor, out_lens: torch.Tensor) -> Tuple[torch.Tensor, torch.Tensor, List[List[int]]]:
+         """Returns a list of sentences given an input batch.
+ 
+@@ -59,7 +59,6 @@ class ScriptGreedyDecoder(torch.nn.Module):
+             list containing batch number of sentences (strings).
+         """
+         # Apply optional preprocessing
+-
+         logits, logits_lens = self._model.encoder(x, out_lens)
+ 
+         output: List[List[int]] = []
+@@ -106,7 +105,7 @@ class ScriptGreedyDecoder(torch.nn.Module):
+             return self._model.prediction(None, hidden)
+         if label > self._blank_id:
+             label -= 1
+-        label = torch.tensor([[label]], dtype=torch.int64)
++        label = torch.tensor([[label]], dtype=torch.int64).to(self.device)
+         return self._model.prediction(label, hidden)
+ 
+     def _joint_step(self, enc: torch.Tensor, pred: torch.Tensor, log_normalize: bool=False) -> torch.Tensor:
