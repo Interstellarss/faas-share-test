@@ -21,15 +21,16 @@ def predict():
     data = {"success": False}
 
     if flask.request.method == "POST":
-        if flask.request.files.get("data"):
-            raw_data = flask.request.files["data"].read()
+        raw_data = flask.request.files.get("payload")
+        if raw_data:
+            raw_data=rawdata.read()
             input_data = pickle.loads(raw_data)
             output = model.predict(input_data)
             data["success"] = True
             data["output"] = output 
-    if log_enabled:
-        print("output:", output)
-        print("elapsed: ", time.time() - start, " with success ", data["success"] )
+            if log_enabled:
+                print("output:", output)
+                print("elapsed: ", time.time() - start, " with success ", data["success"] )
 
     return flask.jsonify(data)      
 

@@ -19,7 +19,7 @@ export const options = {
 //Task specific
 const sample = open('sample.pkl', 'br');
 const fd = new FormData();
-fd.append('data', http.file(sample, 'sample.pkl'));
+fd.append('payload', http.file(sample, 'sample.pkl'));
 let unet = {
         method: 'POST',
 	url: 'http://localhost:5000/predict',

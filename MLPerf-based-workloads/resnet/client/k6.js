@@ -18,7 +18,7 @@ export const options = {
 const gateway = 'http://10.103.51.65:8080'
 const image = open('car.jpg', 'b');
 const fd = new FormData();
-fd.append('image', http.file(image, 'image.png', 'image/png'));
+fd.append('payload', http.file(image, 'image.png', 'image/png'));
 let resnet = {
         method: 'POST',
         //url: gateway + '/function/resnet/predict',

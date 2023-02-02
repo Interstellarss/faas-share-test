@@ -25,7 +25,7 @@ class HTTPClient():
     def request(self):
         #headers = {'Content-type': 'application/json'}
         raw_data = open('sample.pkl', 'rb')
-        response = requests.post("http://" + self.endpoint + "/predict", files = dict(data=raw_data) )
+        response = requests.post("http://" + self.endpoint + "/predict", files = dict('payload'=raw_data) )
         #conn = http.client.HTTPConnection(self.endpoint)
         #conn.request('POST', '/v1/models/gnmt:predict', request, headers)
         #response = conn.getresponse()

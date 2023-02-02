@@ -46,16 +46,17 @@ def predict():
     data = {"success": False}
 
     if flask.request.method == "POST":
-        if flask.request.files.get("image"):
-            image = flask.request.files["image"].read()
+        image = flask.request.files.get("payload")
+        if image:
+            image=image.read()
             image = transform_image(image)
             output = model.predict({"images":image})
             output = post_process(output)
             data["success"] = True
             data["output"] = output 
-    if log_enabled:
-        print("output:", output)
-        print("elapsed: ", time.time() - start, " with success ", data["success"] )
+            if log_enabled:
+                print("output:", output)
+                print("elapsed: ", time.time() - start, " with success ", data["success"] )
 
     return flask.jsonify(data)      
 
