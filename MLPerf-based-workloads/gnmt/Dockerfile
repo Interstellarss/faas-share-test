@@ -10,6 +10,6 @@ ENV MODEL_NAME gnmt
 COPY --from=watchdog /fwatchdog /usr/bin/fwatchdog
 RUN chmod +x /usr/bin/fwatchdog
 ENV mode="http"
-ENV upstream_url="http://127.0.0.1:8051"
+ENV upstream_url="http://127.0.0.1:8501"
 ENV fprocess="/usr/bin/tf_serving_entrypoint.sh"
 ENTRYPOINT ["fwatchdog"]
